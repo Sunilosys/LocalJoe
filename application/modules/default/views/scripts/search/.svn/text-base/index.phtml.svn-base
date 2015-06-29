@@ -1,0 +1,93 @@
+
+<div class="search" id="search_page_container">   
+
+    <!-- *** -->
+
+    <div class='box'>
+
+        <div id='breadcrumbs' class='header'>
+            <h2> 
+                <ul id="breadcrumbs-list">
+
+                </ul>
+            </h2>
+        </div><!-- Breadcrumbs -->	
+
+        <div class='content'>
+
+            <div id='leftnav'>
+                 <div id='widget-shortlists' class='widget shortlists'>
+                    <?php if (isset($this->shortListHtml)) echo $this->shortListHtml; ?>
+                </div><!-- #widget-->
+                 <div id='widget-savedsearches' class='widget savedsearches'>
+                    <?php if (isset($this->savedSearchHtml)) echo $this->savedSearchHtml; ?>
+                </div><!-- #widget-->
+                <form class='refine' id="leftNavForm">
+                    <?php if (isset($this->leftNavHtml)) echo $this->leftNavHtml; ?>
+                    
+                </form>
+
+               
+               
+
+            </div><!-- #leftnav-->
+
+            <div id='content'>
+                <div class='pagenav'>
+                    <div class='sort'>
+                        Sort By: 
+                        <select id="search_select">
+                            <option selected="selected" value="posting_date_dt desc">Post Date (Recent to Oldest)</option>
+                            <option value="posting_date_dt asc">Post Date (Oldest to Recent)</option>
+                            <option value="date_updated_dt desc">Updated Date (Recent to Oldest)</option>
+                            <option value="date_updated_dt desc">Updated Date (Oldest to Recent)</option>
+                        </select>
+                    </div>
+                    <div class="search-count">
+                        <span id="search_count_display"></span>
+                        
+                    </div>
+                    <a id='mapView' title="Map View"></a>
+                    <a id='gridView' title="Grid View"></a>
+                    <a id='lineView' class='selected' title="Listings"></a>
+                </div> 
+ <div id="first_post_loader" style="position:absolute;height:190px;width:710px;z-index:9999">&nbsp;</div>
+                <div class='items' id="searchContentDiv"> 
+
+                    <?php if (isset($this->pageHtml) && $this->pageHtml != "") { echo $this->pageHtml;} ?>
+                </div> <!--.items-->
+                 <div class="map-show-more" style="display:none" title="Show More">
+                   <span><a href="#" style="color: rgb(0, 0, 0);" class="pagenav-show-more" style="display:none" id="pageNavShowMore">Show More</a></span>
+    
+                </div>
+                 <div class='items map-view' style="display:none" id="mapContentDiv">
+                </div> <!--.items-->
+               
+                <div id="last_post_loader">&nbsp;</div>
+                <input type="hidden" id="startRowIndex" name="startRowIndex" value='<?php if (isset($this->start)) echo $this->start; else echo '0' ?>'></input>
+                <input type="hidden" id="solrRows" name="solrRows" value='<?php if (isset($this->rows)) echo $this->rows; else echo '16' ?>'></input>
+ <input type="hidden" id="numFound" name="numFound" value='0'></input>
+ <input type="hidden" id="searchBy" name="searchBy" value='filter'></input>
+ <input type="hidden" id="search_by_shortlistId" name="search_by_shortlistId" value=''></input>
+ <input type="hidden" id="userLoggedInFlag" name="userLoggedInFlag" value='<?php if (isset($this->userLoggedIn)) echo $this->userLoggedIn; else echo '0' ?>'></input>
+            </div>
+            <br style="clear: both;"/>
+        </div><!-- .content-->
+    </div><!-- .box -->
+
+</div><!-- #main -->
+<a class="scrollup"></a>
+	       
+<script type="text/javascript">
+ $(function(){   
+    $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 400);
+        return false;
+    });
+  });
+
+$('#main-menu').find('a').removeClass('selected');
+$('#menu-category').addClass('selected');
+
+
+</script>

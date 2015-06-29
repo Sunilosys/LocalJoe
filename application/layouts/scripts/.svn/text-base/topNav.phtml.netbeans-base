@@ -1,0 +1,21 @@
+
+<ul id='top-menu'>  
+    <!--
+    <div class="tweet top">
+    <div>
+    <label>Email</label><input/><br/>
+    <label>Password</label><input/><br/>
+    </div>
+    <div class='button-pane'>
+    <a href='profile.php' class='green medium-large button'>Sign In</a><br/>
+    <div style='font-size: 12px;'>Or, Sign With</div>
+    <a class='grey medium-large button facebook'><span class='icon'></span>Facebook</a>
+    <a class='grey medium-large button google'><span class='icon'></span>Google</a>
+    </div>
+    </div>-->
+  
+     <li class='signin'><a class="top-nav-sign-in" style="display:<?php if ($this->userLoggedIn) { echo 'none';} else {echo 'inline';}?>">Sign In</a>
+    </li>   
+    <li class='top-nav-sign-out' style="display:<?php if ($this->userLoggedIn) { echo 'block';} else {echo 'none';}?>"><a>Sign Out</a></li>
+    <li class='top-nav-user' style="display:<?php if ($this->userLoggedIn) { echo 'block';} else {echo 'none';}?>"><a href="#page=profile"><?php if ($this->userName) { echo $this->userName;} else {echo '';}?></a>|</li>
+</ul>

@@ -1,0 +1,48 @@
+<div>
+
+    <?php
+    if ($this->validUser) {
+        ?>
+        <script>
+            var userId = "<?php echo $this->userId; ?>";
+            var sso_url = "<?php echo $this->sso_url; ?>";
+            var authentication_method_id = "<?php echo $this->authentication_method_id; ?>";
+            if (userId != undefined && userId != null)
+            {
+                $.ajax({
+                    global:false,
+                    type: "GET",   
+                    cache:false,
+                    dataType:"jsonp",
+                    crossDomain:true,   
+                    url: sso_url + "/activate_user.php?userId=" +  userId + '&authenticationMethodId=' + authentication_method_id,
+                    success: function(data) {
+                          
+                        if (data.status == 'success')     
+                        {                   
+                            window.location = "/#page=profile&ref=activation";
+                        } 
+              
+                    },
+                    error:function (xhr, ajaxOptions, thrownError, request, error){
+                        if(xhr.readyState == 0 || xhr.status == 0) 
+                            return;  // it's not really an error
+                        else
+                        {
+                               
+                        } 
+                    }    
+
+                });
+            }
+          
+        </script>
+    <?php } else { ?>
+
+        <div class='instruction'>
+            Sorry, Invalid account activation key.
+        </div>
+    <?php } ?>
+
+
+</div>

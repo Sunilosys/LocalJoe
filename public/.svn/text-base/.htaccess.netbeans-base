@@ -1,0 +1,47 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^blog - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+
+# Set the cache-control max-age
+# 1 year
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=31449600, public"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch "\.(xml|txt)$">
+Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+# 2 DAY - not cached on development
+# <FilesMatch "\.(js|css)$">
+# Header set Cache-Control "max-age=31449600, public, must-revalidate"
+# </FilesMatch>
+# 4 HOURS
+<FilesMatch "\.(html|htm)$">
+Header set Cache-Control "max-age=14400, must-revalidate"
+</FilesMatch>
+
+# Turn off the ETags
+Header unset ETag
+FileETag None
+
+# Turn off the Last Modified header except for html docs
+#<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif)$">
+#Header unset Last-Modified
+#</FilesMatch>
+
+# compress text, html, javascript, css, xml:
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript

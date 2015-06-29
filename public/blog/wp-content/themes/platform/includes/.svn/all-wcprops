@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes
+END
+core.init.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/core.init.php
+END
+class.sections.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/class.sections.php
+END
+class.css.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/class.css.php
+END
+library.options.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/library.options.php
+END
+config.options.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/config.options.php
+END
+library.templates.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/library.templates.php
+END
+config.templates.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/config.templates.php
+END
+actions.site.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/actions.site.php
+END
+class.colors.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/class.colors.php
+END
+class.types.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/class.types.php
+END
+core.globals.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/core.globals.php
+END
+config.widgets.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/config.widgets.php
+END
+class.typography.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/class.typography.php
+END
+library.functions.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/library.functions.php
+END
+class.template.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/class.template.php
+END
+library.shortcodes.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/library.shortcodes.php
+END
+class.layout.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/class.layout.php
+END
+library.I18n.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/library.I18n.php
+END
+version.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/LocalJoe/!svn/ver/564/trunk/public/blog/wp-content/themes/platform/includes/version.php
+END

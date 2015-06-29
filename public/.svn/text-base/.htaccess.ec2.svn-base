@@ -1,0 +1,71 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+# Set the cache-control max-age
+# 1 year
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=31449600, public"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch "\.(xml|txt)$">
+Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+# 2 DAY
+<FilesMatch "\.(js|css)$">
+Header set Cache-Control "max-age=31449600, public, must-revalidate"
+</FilesMatch>
+# 4 HOURS
+<FilesMatch "\.(html|htm)$">
+Header set Cache-Control "max-age=14400, must-revalidate"
+</FilesMatch>
+
+# Turn off the ETags
+Header unset ETag
+FileETag None
+
+# Turn off the Last Modified header except for html docs
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif)$">
+Header unset Last-Modified
+</FilesMatch>
+
+SetOutputFilter DEFLATE
+
+# Netscape 4.x has some problems...
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+
+# Netscape 4.06-4.08 have some more problems
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+
+# MSIE masquerades as Netscape, but it is fine
+# BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+# NOTE: Due to a bug in mod_setenvif up to Apache 2.0.48
+# the above regex won't work. You can use the following
+# workaround to get the desired effect:
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+
+# Don't compress images
+SetEnvIfNoCase Request_URI \
+\.(?:gif|jpe?g|png)$ no-gzip dont-vary
+
+# Make sure proxies don't deliver the wrong content
+Header append Vary User-Agent env=!dont-vary
+
+AuthType Basic
+AuthName "Private Access"
+AuthUserFile "/var/www/html/localjoe/public/.htpasswd"
+Require valid-user
+
+
+
+
+
+
+
+
+

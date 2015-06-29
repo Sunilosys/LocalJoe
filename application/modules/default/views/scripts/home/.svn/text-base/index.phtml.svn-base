@@ -1,0 +1,157 @@
+<div id='homewrap' class='home signed-in'  >
+    <div id='category-finder' class='finder' style="left:0px;display:block;position:relative;top:0px;z-index:1;padding-bottom:5px;padding-top:0px"><div style="min-width:100%">
+
+                    <div class='categories-list' style="padding-top:10px">
+                      <div class='column'><ul>
+                                <?php
+                                //$numPerCol = ceil((count($this->parentCategoryInfo) + count($this->categoryInfo)) / 6);
+                                $i = 0;
+                                foreach ($this->parentCategoryInfo as $key => $val) {
+                                     if ($i != 0)
+                                     echo "</ul></div><div class='column'><ul>";   
+                                    ?>                                 
+
+                                    <li>
+                                        <img class="category-icon" src="/images/category/<?php echo $val->getParent_category_id() ?>-icon.png"></img>
+                                        <h3><b><a href="#page=search" id='parentcategory_<?php echo $val->getParent_category_id() ?>' name='parentcategory_<?php echo $val->getParent_category_id() ?>'><?php echo $val->getParentCategoryName() ?></a></b></h3></li>
+                                    <?php
+                                    $i++;
+//                                    if ($i > $numPerCol) {
+//                                        echo "</ul></div><div class='column'><ul>";
+//                                        $i = 0;
+//                                    }
+                                    foreach ($this->categoryInfo as $key2 => $val2) {
+                                        ?>
+                                        <?php if ($val->getParent_category_id() == $val2->getParent_category_id()) { ?>
+                                           <li><h4><a href="#page=search" id='category_<?php echo $val->getParent_category_id() . '_' ?><?php echo $val2->getCategory_id() ?>' name='category_<?php echo $val2->getCategory_id() ?>' ><?php echo $this->translate->_($val2->getCategoryName()) ?></a></h4></li>
+                                            <?php 
+                                           // $i++;
+                                           // if ($i > $numPerCol) {
+                                            //    echo "</ul></div><div class='column'><ul>";
+                                            //    $i = 0;
+                                            //}
+                                        }
+                                        ?>
+                                    <?php } ?>                   
+                                <?php } ?>
+                            </ul></div>   
+
+                    </div><!--categories-list-->
+
+
+                </div></div>
+    <div class='widgetarea'>
+        <div class="widget col col12" id="widget-recently-posted">
+            <div class="header">
+                <h2>Recently Posted Items</h2>
+            </div>
+
+            <div class="content" id="recently_posted_items_container" role="tablist">
+<?php if (isset($this->recentlyPostedItemsHtml)) echo $this->recentlyPostedItemsHtml; ?>
+
+
+            </div>  
+        </div><!-- .content -->
+    </div><!-- .widget -->
+</div><!-- .widgetarea -->
+<br style="clear: both;"/>
+
+<script>
+     if ($("#recently_posted_items_container").html() != "") 
+         {
+             $("#recently_posted_items_container .listing-short .posting-link").colorbox({
+                    rel:'.posting-link', 
+                    transition:"none", 
+                    width:"990px", 
+                    height:"90%",
+                     initialWidth:"980px", 
+                    initialHeight:"85%",
+                    fixed:'true',
+                    iframe:false,
+                    current: "Posting {current} of {total}",
+                    onComplete:function(){
+                $('#cboxLoadedContent #listing-title-link').show();
+                  $('#cboxLoadedContent #listing-title-span').hide();
+                        $('#cboxLoadedContent #thumbs').jcarousel({       
+                        });
+       
+                        $('#cboxLoadedContent .thumbs .thumb').click(function(){
+                            $('#cboxLoadedContent .thumbs .selected').removeClass('selected');
+                            $(this).addClass('selected');
+                            $('#cboxLoadedContent .images .current').removeClass('current');
+                            $('#cboxLoadedContent .images > .image').eq($(this).index()).addClass('current');
+                        });
+                        $('#cboxLoadedContent .images .current').attr("href","#");
+                        $('#cboxLoadedContent .images .image').click(function(){
+                            return false;
+                        });
+              
+                    }
+                });
+         }
+      
+    function getRecentlyPostedItems()
+    {
+        var categoryId = '0';
+        var isParentCategory = 'false';
+          
+        $.ajax({
+            type: "GET",
+            cache:true,
+            url: "/home/getrecentlyposteditems/", 
+            data:"categoryId=" + categoryId + "&isParentCategory=" + isParentCategory,
+            success: function(data){
+                 $('#recently_posted_items_container').unmask();
+                if (data != "")
+                {
+                    $("#recently_posted_items_container").empty();
+                    $(data).appendTo($("#recently_posted_items_container"))
+                   
+                } 
+                $("#recently_posted_items_container .listing-short .posting-link").colorbox({
+                    rel:'.posting-link', 
+                    transition:"none", 
+                    width:"990px", 
+                    height:"90%",
+                     initialWidth:"990px", 
+                    initialHeight:"90%",
+                    fixed:'true',
+                    iframe:false,
+                    current: "Posting {current} of {total}",
+                    onComplete:function(){
+                $('#cboxLoadedContent #listing-title-link').show();
+                  $('#cboxLoadedContent #listing-title-span').hide();
+                        $('#cboxLoadedContent #thumbs').jcarousel({       
+                        });
+       
+                        $('#cboxLoadedContent .thumbs .thumb').click(function(){
+                            $('#cboxLoadedContent .thumbs .selected').removeClass('selected');
+                            $(this).addClass('selected');
+                            $('#cboxLoadedContent .images .current').removeClass('current');
+                            $('#cboxLoadedContent .images > .image').eq($(this).index()).addClass('current');
+                        });
+                        $('#cboxLoadedContent .images .current').attr("href","#");
+                        $('#cboxLoadedContent .images .image').click(function(){
+                            return false;
+                        });
+              
+                    }
+                });
+    
+            }
+        });
+    }
+    var home_page_interval_id = self.setInterval("getRecentlyPostedItems()",60000);       
+        
+    $('document').ready(function(){
+        var ref = getUrlParameter('ref') ;
+        if (ref == "profile")
+        {
+            $('#dialogSignUp #sign-up-page').val("homepage-ref-profile"); 
+            $('#dialogSignUp').dialog('open');
+        }
+             
+    });
+    $('#menu-home').addClass('selected');
+</script>
+

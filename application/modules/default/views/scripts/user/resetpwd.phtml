@@ -1,0 +1,50 @@
+<div class="widget resetpwd-section" style="text-align:left;min-height:650px;">
+
+    <?php
+    if ($this->validUser) {
+        ?>
+        <script>
+            var userId = "<?php echo $this->userId; ?>";
+            var sso_url = "<?php echo $this->sso_url; ?>";
+            var authentication_method_id = "<?php echo $this->authentication_method_id; ?>";
+               
+              
+        </script>
+        <form id="reset_password_form" name="reset_password_form">
+            <input type="hidden"  id="user_id" name="user_id" value="<?php if (isset($this->userId)) echo $this->userId; ?>"></input>
+             <input type="hidden"  id="user_email" name="user_email" value="<?php if (isset($this->userEmail)) echo $this->userEmail; ?>"></input>
+          
+            <div style="border-style: solid;border-color: rgb(153, 153, 153);
+                 -moz-border-top-colors: none;
+                 -moz-border-right-colors: none;
+                 -moz-border-bottom-colors: none;
+                 -moz-border-left-colors: none;
+                 border-image: none;
+                 border-width: 0px 0px 1px;
+                 border-radius: 0px 0px 0px 0px;
+                 margin: 5px 0px;padding:15px;padding-left:20px"> 
+                <h2 style="font-size:16px" class="title">Reset your password</h2>   
+            </div>
+            <div> 
+                <label style="width:200px">New Password</label>   
+                <input type='password'  id="new_password" name="new_password" style='margin-top:10px;' title="New Password"/>
+            </div>
+            <div>
+                <label style="width:200px">Retype Password</label>     
+                <input type='password'  id="retype_new_password" name="retype_new_password" style='margin-top:10px;' title="Retype New Password"/>
+            </div>
+            
+            <div class='buttons' style='text-align: left;padding-left:214px;padding-top:10px'>
+
+                <a class="change button primary small">Change</a> <label id="reset_pwd_error" style="vertical-align:100%;display:none;padding-left:10px" class="error"></label>
+            </div>
+        </form>
+    <?php } else { ?>
+
+        <div class='instruction'>
+            Sorry, Invalid Reset Password Request.
+        </div>
+    <?php } ?>
+
+
+</div>

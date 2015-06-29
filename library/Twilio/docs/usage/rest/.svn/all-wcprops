@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest
+END
+notifications.rst
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/notifications.rst
+END
+conferences.rst
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/conferences.rst
+END
+members.rst
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/members.rst
+END
+calls.rst
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/calls.rst
+END
+accounts.rst
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/accounts.rst
+END
+recordings.rst
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/recordings.rst
+END
+callerids.rst
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/callerids.rst
+END
+transcriptions.rst
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/transcriptions.rst
+END
+phonenumbers.rst
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/phonenumbers.rst
+END
+applications.rst
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/applications.rst
+END
+queues.rst
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/queues.rst
+END
+sms-messages.rst
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/usage/rest/sms-messages.rst
+END

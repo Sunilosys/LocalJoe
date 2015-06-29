@@ -1,0 +1,9 @@
+<script>
+	<?php if ($this->userLoggedIn) { ?>
+		$('#topnav_my_account').show();
+		$('#topnav_sign_up').hide();
+	<?php } ?>
+</script>
+ <div class='instruction'>
+                Your post has been successfully created.   
+            </div>

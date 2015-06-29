@@ -1,0 +1,478 @@
+
+                      
+<div id="dialogAccountExists" class='dialog' style='display: none;'>   
+    <div class="signin-tab">    
+        <div class="header" style="display:none;" id="fb_sign_in_exists">
+            <h2>Sign In</h2>
+            Account exists through Facebook.
+        </div>
+        <div class="header" style="display:none;" id="google_sign_in_exists">
+            <h2>Sign In</h2>
+            Account exists through Google.
+        </div>
+        <div class="content">
+            <form id="account_exists_form">
+                <div class="fields">
+                    <div class='account-exists-social-signin'>                   
+                        <a id="fb_button" class="button-facebook-large"></a>
+                        <a id="google_button" class="button-google-large"></a>
+                    </div>          
+                </div>           
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="createpost">
+
+    <div id="wizard">
+
+        <div class="wizard-step" title='Category'>
+            <h2><?php echo $this->translate->_('Edit Post'); ?></h2>	
+            <h1><?php echo $this->translate->_('Select a Category') . ':'; ?></h1>
+            <form name="select_category_form">
+                <div class='finder static'>
+
+
+                    <div class='categories-list'>
+                        <div class='column'><ul>
+                                <?php
+                                $numPerCol = ceil((count($this->parentCategoryInfo) + count($this->categoryInfo)) / 6);
+                                $i = 0;
+                                foreach ($this->parentCategoryInfo as $key => $val) {
+                                    ?>
+
+                                    <li><img class="category-icon" src="/images/category/<?php echo strtolower($val->getParentCategoryName()) ?>-icon.png"></img><h3><b><?php echo $val->getParentCategoryName() ?></b></h3></li>
+                                    <?php
+                                    $i++;
+                                    if ($i > $numPerCol) {
+                                        echo "</ul></div><div class='column'><ul>";
+                                        $i = 0;
+                                    }
+                                    foreach ($this->categoryInfo as $key2 => $val2) {
+                                        ?>
+                                        <?php if ($val->getParent_category_id() == $val2->getParent_category_id()) { ?>
+                                            <li><h4><a name='category_<?php echo $val2->getCategory_id() ?>'><?php echo $this->translate->_($val2->getCategoryName()) ?></a></h4></li>
+                                            <?php
+                                            $i++;
+                                            if ($i > $numPerCol) {
+                                                echo "</ul></div><div class='column'><ul>";
+                                                $i = 0;
+                                            }
+                                        }
+                                        ?>
+                                    <?php } ?>                   
+                                <?php } ?>
+                            </ul></div>   
+                    </div><!--categories-list-->
+                </div>
+            </form>
+        </div>   
+
+        <div id="steptwo" class="wizard-step" title='Post Info'>
+            <h2><?php echo $this->translate->_('Edit a Post'); ?></h2>	
+            <h1><?php echo $this->translate->_('Enter Post Info'); ?></h1>
+            <div style="text-align: center;">
+
+                <form id="post_info_form"  name="post_info_form">
+                    <div class="form-group post-title">
+                        <h3><?php echo $this->translate->_('Post Title'); ?>:</h3>
+                        <input type="text" class="alphanumeric required" value="<?php if (isset($this->title)) echo $this->title; ?>" name="post_title" id="post_title"/>  
+
+                    </div>
+                    <div class="form-group reply-to"> 
+                        <h3><?php echo $this->translate->_('Reply To'); ?>:</h3>
+
+                        <div class="line" style='padding-top: 0; border: 0;'>
+                            <?php if ($this->userLoggedIn) { ?>
+                                <input name="reply_email_addr"  readonly="readonly" id="reply_email_addr" type="text" value='<?php echo $this->userEmail ?>'/>  
+
+                            <?php } else { ?>
+                                <input name="reply_email_addr" class="required email" id="reply_email_addr" type="text" title='Email'/>  
+
+                                <a id="website_sign_in" style='padding: 5px 4px; margin-left:5px; vertical-align: bottom; position: relative; top: -2px; left: 4px;display:none' class='signin button medium primary'>Sign In</a>
+                                <a class='button-google' id="google_button"></a>
+                                <a class='button-facebook' id="fb_button"></a>
+                            <?php } ?>
+                            <input id="user_exists_flag" value="<?php echo $this->userLoggedIn; ?>" type="hidden"></input>
+                        </div>
+                        <div style="color:#DD4B39" id="sign_in_status_post_info"></div>
+                    </div>
+                    <div class="form-group product-info"> 
+                        <div class="line"><label class="attribute-label"><?php echo $this->translate->_('Post Anonymously'); ?>:</label><input id="anon" name='anon' type='checkbox'></input>
+                        </div>
+                        <div class="line"><label class="attribute-label"><?php echo $this->translate->_('Phone Number'); ?>:</label><input value="<?php if (isset($this->phone)) echo $this->phone; ?>" id="phone_no"  name="phone_no" class="phone example" style="width:145px" size=10 type='text' title="<?= $this->phoneformat; ?>"/></div>                        
+                    </div>
+                    <div class="form-group"> 
+                        <h3><?php echo $this->translate->_('Post Description'); ?>:</h3>
+                        <textarea id="post_desc" class="mceEditor"  style="width:548px" name="post_desc"><?php if (isset($this->description)) echo $this->description; ?></textarea>
+                    </div>
+
+                    <div class="form-group product-info"> 
+                        <div id="categoryAttrSection">
+                            <div  id="categoryAttrSectionHtml"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group tags"> 
+                        <h3><?php echo $this->translate->_('Tags'); ?>:</h3>
+                        <textarea name="tags" id="tags"  rows="1" type="text" class='alphanumeric tags mceNoEditor'/></textarea>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="wizard-step" title='Photos'>
+            <h2>Edit a Post</h2>	
+            <h1>Select Photos</h1>
+            <div id="emptyinstr" class='instruction'>
+                <?php echo $this->translate->_('post.photos.emptyinstruction'); ?> 
+            </div>
+            <div id="instr" class='instruction' style="display:none;">
+                <?php echo $this->translate->_('post.photos.instruction'); ?> 
+            </div>
+            <form id="fileupload" action="/upload/index/<?php if (isset($this->postingId)) echo '?postingId=' . $this->postingId; ?>" method="POST" enctype="multipart/form-data">
+                <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+
+                <div class="fileupload-buttonbar">
+
+                    <a id='photoUpload' class = 'button medium-large primary' style='margin-right: 5px;' href="#">Upload Photos</a>
+                    <input type="file" id="fileInput" name="files[]" multiple="multiple" class="file_input" style="display:none;">
+
+                    <!--                    <a id='cancelUpload' class = 'button medium-large primary' style='margin-right: 5px;' href="#">Cancel Upload</a>-->
+                    <!--                        <a id='deleteUpload' class = 'button medium-large primary' style='margin-right: 5px;' href="#">Delete</a>
+                                            <input type="checkbox" class="toggle">-->
+
+                    <!-- The global progress bar -->
+                    <span class="select-counter-section">
+                        <span>Selected </span><a  id="selectedImagesCount" href="#">0</a> of <span id="totalImagesCount">0</span>
+                    </span>
+                    <div class="progress progress-success progress-striped active fade">
+                        <div class="bar" style="width:0%;"></div>
+                    </div>
+
+
+
+                </div>
+                <!-- The loading indicator is shown during image processing -->
+                <div class="fileupload-loading"></div>
+            </form>
+
+
+            <div id='phototabs'>
+                <ul style="display:none">       
+                    <li><a href='#tabs-1'>Library</a></li>
+                </ul>
+                <div id='tabs-1' class='photobin empty'>
+                    <ul id="uploadFileListing"></ul>
+
+                </div> 
+            </div>
+            <!-- The table listing the files available for upload/download -->
+<!--            <table class="table table-striped"><tbody id="uploadFileListing" class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>-->
+            <!-- modal-gallery is the modal dialog used for the image gallery -->
+            <!--            <div id="modal-gallery" class="modal modal-gallery hide fade">
+                            <div class="modal-header">
+                                <a class="close" data-dismiss="modal">&times;</a>
+                                <h3 class="modal-title"></h3>
+                            </div>
+                            <div class="modal-body"><div class="modal-image"></div></div>
+                            <div class="modal-footer">
+                                <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+                                <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+                                <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+                                <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
+                            </div>
+                        </div>-->
+            <!-- The template to display files available for upload -->
+            <script id="template-upload" type="text/x-tmpl">
+                {% for (var i=0, file; file=o.files[i]; i++) { %}
+                <li class="template-upload fade" li>
+                    <div class="image">
+                        <div class="preview"><span class="fade"></span></div>                    
+                        <span class="cancel pophint-delete">{% if (!i) { %}
+                            <a id='cancelUpload' class = 'delete'></a>
+                            {% } %}</span>
+                    </div>
+                    <div class="name caption">{%=file.name%}</div>
+                    <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                    {% if (file.error) { %}
+                    <span class="error"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
+                        {% } else if (o.files.valid && !i) { %}
+                        <span>
+                            <span class="progress progress-success progress-striped active"><div class="bar" style="width:0%;"></div></div>
+                            </span>
+                            <span class="start">{% if (!o.options.autoUpload) { %}
+                                <button class="btn btn-primary">
+                                    <i class="icon-upload icon-white"></i> {%=locale.fileupload.start%}
+                                </button>
+                                {% } %}</span>
+                            {% } else { %}
+                            <span></span>
+                            {% } %}
+
+                            </li>
+                            {% } %}
+                            </script>
+                            <!-- The template to display files available for download -->
+                            <script id="template-download" type="text/x-tmpl">
+                                {% for (var i=0, file; file=o.files[i]; i++) { %}
+                                <li class="{%=file.checkClass%} {%=file.coverClass%} template-download fade" title="{%=file.name%}">
+                                    {% if (file.error) { %}
+                                    <div class="image"> <span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</div>
+                                    <div class="caption">{%=file.name%}</div>
+                                    {% } else { %}                                   
+                                    <span class="cover-photo">Cover Photo</span>                                    
+                                    <div class="image" ondblclick="return launchEditor(this, '{%=file.url%}');">{% if (file.thumbnail_url) { %}
+                                        <img id="image1"  src='{%=file.thumbnail_url%}'/>
+                                        <span class="pophint-delete" ondblclick="return 0;"><a class="delete" href="#" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"></a></span>
+                                        <ul class="pophint menu">
+                                            <li><a class="menu-cover">Use as Cover</a></li>
+                                            <li><a class="menu-nocover">Don't Use as Cover</a></li>
+                                            <li><a class="menu-edit">Edit</a></li>
+                                            <li><a class="menu-select">Select</a></li>
+                                            <li><a class="menu-deselect">Deselect</a></li>
+                                            <li><a class="menu-delete">Delete</a></li>
+                                        </ul>                                   
+                                    </div>
+                                    {% } %}
+                                    <div class="caption">
+                                        <textarea></textarea>
+                                        <span>{%=file.name%}</span>
+                                    </div>                     
+                                    <span class="edit-select"><a class="check {%=file.checkClass%}"/></span>
+                                    <input class="file-size" type="hidden" value="{%=file.size%}">
+                                    <input class="file-name" type="hidden" value="{%=file.name%}">
+                                    <input class="image-id" type="hidden" value="{%=file.image_id%}">
+                                    <input class="org-image-width" type="hidden" value="{%=file.org_img_width%}">
+                                    <input class="org-image-height" type="hidden" value="{%=file.org_img_height%}">
+                                    <input class="image-type-width" type="hidden" value="{%=file.image_type_width%}">
+                                    <input class="image-type-height" type="hidden" value="{%=file.image_type_height%}">
+                                    <input class="image-type-size" type="hidden" value="{%=file.image_type_size%}">
+                                    {% } %}                      
+                                </li>
+                                {% } %}
+                                </script>
+                                <?php
+                                $script1 = $this->minifyInlineScript() // Whatever was already loaded from Controller.
+                                        ->prependFile('/js/main.js')
+                                        ->prependFile('/js/locale.js')
+                                        ->prependFile('/js/jquery.fileupload-ui.js')
+                                        ->prependFile('/js/jquery.fileupload-ip.js')
+                                        ->prependFile('/js/jquery.fileupload.js')
+                                        ->prependFile('/js/jquery.iframe-transport.js')
+                                        ->prependFile('/js/canvas-to-blob.min.js')
+                                        ->prependFile('/js/load-image.min.js')
+                                        ->prependFile('/js/tmpl.min.js');
+
+                                echo $script1;
+                                ?>
+
+
+
+                                </div>
+
+
+                                <div class="wizard-step" title='Location Info'>
+                                    <h2><?php echo $this->translate->_('Edit a Post'); ?></h2>	
+                                    <h1><?php echo $this->translate->_('Your Location'); ?></h1>
+                                    <div class='instruction'>
+<?php echo $this->translate->_('post.about.instruction'); ?>
+                                    </div>
+
+                                    <div style="width: 550px; margin: 10px auto;">
+                                        <form id="location_info_form" name="location_info_form">
+                                            <div class="form-group">
+                                                <h3><?php echo $this->translate->_('Enter Your Location Info'); ?></h3>
+
+                                                <div class="line"><label><?php echo $this->translate->_('Address or Cross-street'); ?></label><input id="location_address" name="location_address" value="<?php if (isset($this->address)) echo $this->address; ?>"  type='text' class='required'/>
+                                                    <label id="invalid_location" class="error" style="display: none;">Please enter a valid address.</label>
+                                                    <div id="location_map" class="location-map"></div>
+                                                </div>
+                                                <input id="zip_code" value="<?php if (isset($this->zip)) echo $this->zip; ?>" name="zip_code" type='hidden'/>
+                                                <input id="location_city" value="<?php if (isset($this->city)) echo $this->city; ?>" name="location_city" type='hidden'/>
+                                                <input type="hidden" value="<?php if (isset($this->lat)) echo $this->lat; ?>" id="location_lat" name="location_lat">
+                                                <input type="hidden" value="<?php if (isset($this->lon)) echo $this->lon; ?>" id="location_lon" name="location_lon">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                                <div class="wizard-step" title='Preview & Post'>
+                                    <h2><?php echo $this->translate->_('Edit a Post'); ?></h2>	
+                                    <h1><?php echo $this->translate->_('Preview Your Post'); ?></h1>
+
+                                    <div class='instruction'>
+<?php echo $this->translate->_('post.edit.instruction'); ?>
+                                    </div>
+                                    <div class='listing' id="preview_post_listing">
+                                        <h2 id="preview_post_title" class='listing-title'></h2>
+                                        <div class='post-info'><span>Posted Today at 6:00am</span>
+                                        </div> 			 					 
+                                        <div class='data sidebar'>
+                                            <div style="margin: 20px 0px; overflow: hidden;">
+                                                <div style="float: left; width: 50%;">
+                                                    <ul id="preview_emphasized_section">
+
+                                                    </ul>
+                                                </div>
+
+                                                <div style="float: right; width: 50%;">
+                                                    <span class='message'><a id="preview_email_seller" href="mailto:email@address.com" class=''><span class='icon'></span>Email Poster</a></span>
+                                                    <span class='phone'><span class='icon'></span><span id="preview_phone"></span></span>
+                                                </div>
+                                            </div>
+                                            <div class='pod actions-wrap'>
+
+                                                <span class='label'>Spam:</span> 
+                                                <ul class='actions rate'>
+                                                    <li><a href='#' class='spam'></a><span class='pophint'>Flag as Spam</span></li>  
+                                                </ul>
+                                                <span class='label'>Shortlist:</span>
+                                                <ul class='actions'>
+                                                    <li><a href="" class='favorite'><img src='/images/icon-twitter.png'/></a>
+                                                        <ul class='pophint menu'>
+
+                                                            <li class='title'>Add to Shortlist</li>
+                                                            <li><a href="#">Apartments in SJ</a></li>
+                                                            <li><a href="#">Flatscreens</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul><!-- .actions -->	
+                                                <span class='label'>Share:</span>
+
+                                                <ul class='actions share'>
+                                                    <li><a href="#" class='facebook'><img src='/images/icon-flag.png'/><span class='pophint'>Like</span></a></li>
+                                                    <li><a href="#" class='twitter'><img src='/images/icon-facebook.png'/><span class='pophint'>Tweet</span></a></li>
+                                                    <li><a href="#" class='email'><img src='/images/icon-twitter.png'/><span class='pophint'>Email</span></a></li>
+                                                </ul><!-- .actions -->	
+                                            </div><!-- .actions-wrap -->
+
+                                            <div class="pod seller">
+                                                <h4 class='title'>About this poster</h4>
+
+                                                <ul>
+                                                    <li><span class='label'>Poster:</span><span class='item'><span class='icon'></span><span id="preview_user"><?php
+if ($this->userLoggedIn) {
+    echo ($this->userName);
+}
+?></span></span></li>                                                  
+                                                    <li><span class='label'>Location:</span><span id="preview_location_address" class="item"></span></li>
+                                                    <li><div  id="map_canvas" class='map'>                                                         
+
+                                                        </div></li>
+
+                                                </ul>
+                                            </div>
+                                            <div id="detailsdiv" class='metadata pod'>			
+                                                <h4 class='title'>Details</h4>		
+                                                <ul id="preview_category_attributes">
+
+                                                </ul>
+
+                                            </div><!-- .metadata -->
+                                            <div id="tagsdiv" class='pod tags'>
+                                                <h4 class='title'>Tags</h4>
+                                                <ul  id="preview_tags">
+
+                                                </ul>
+
+                                            </div><!-- .tags -->
+                                        </div><!-- .sidebar -->
+
+                                        <div  class='description'>
+                                            <div id="preview-images" class='images'>
+                                            </div><!--.images-->
+                                            <div id="thumbs_wrapper">
+                                                <ul id='thumbs' class='thumbs jcarousel-skin-tango'>
+
+                                                </ul>
+                                            </div>
+                                            <div  id="preview_post_desc" class="copy">
+
+                                            </div>
+                                        </div><!-- .listing-->
+
+                                    </div>        
+
+                                </div>
+                                </div>
+                                <!-- dialogs and modals -->
+                                <div id="dialogSignIn" class='dialog' style='display: none;height:auto;'>            
+                                    <label style="color:#DD4B39" id="dialog_sign_in_status">Account exists. Please sign in.</label></br></br>
+                                    <label>Email</label><input id="create_post_sign_in_email_id"  type="text" name="create_post_sign_in"/><br/>
+                                    <label>Password</label><input id="create_post_sign_in_pwd"  name="create_post_sign_in_pwd" type="password"/><br/>
+                                </div> 
+                                <div id="dialogRegister" class='dialog' style='display: none;'>
+                                    <form>
+
+                                        <label>First Name</label><input/><br/>
+                                        <label>Last Name</label><input/><br/>
+                                        <label>Email</label><input title="email@gmail.com"/><br/>
+                                        <label>Password</label><input type='password' /><br/>
+                                        <label>Confirm Password</label><input type='password'/><br/>
+                                    </form>
+
+                                </div>                                
+
+                                <!--- *** -->                     
+
+                                </div>
+<script>
+
+//Create Post & Edit Post Specific Variables
+var postingId = "<?php if (isset($this->postingId)) echo $this->postingId; ?>";                
+if (postingId != undefined && postingId != "")
+    editPost = true;
+             
+if (editPost != undefined && editPost != null && editPost == true) 
+    finishText = "Save & Finish";
+
+//End
+</script>
+                                <?php
+                                $script2 = $this->minifyInlineScript() // Whatever was already loaded from Controller.			
+                                        ->prependFile('/js/validate.js') // 5th			
+                                        ->prependFile('/js/combobox.js') // 3rd			
+                                        ->prependFile('/js/jquery.jWizard.min.js'); // 4th
+
+                                echo $script2;
+                                ?>
+
+<script language="JavaScript" type="text/javascript" src='/js/createpost.js'></script>
+<script>                  
+
+var $wizard = $("#wizard");
+$wizard.hide(); 
+//$('document').ready(function(){
+
+    //var $wizard = $("#wizard");
+    $wizard.jWizard("changeStep", 1);                   
+    $wizard.show();
+    var categoryName = "<?php if (isset($this->categoryName)) echo $this->categoryName; ?>";
+   
+    $("#wizard .jw-menu li:first-child a").html('Category: ' + categoryName );   
+    var categoryId = "<?php if (isset($this->categoryId)) echo $this->categoryId; ?>";
+    var postingCategoryAttributes = '<?php if (isset($this->categoryAttributes)) echo $this->categoryAttributes; ?>';
+    if (postingCategoryAttributes != undefined && postingCategoryAttributes != "")
+        postingCategoryAttributes = eval('(' + postingCategoryAttributes + ')');
+    LoadCategoryAttributes(categoryId,postingCategoryAttributes);
+    var postAnonymously = "<?php if (isset($this->post_anonymously)) echo $this->post_anonymously; ?>";
+    if (postAnonymously == '1')
+    {
+        $('#anon').attr("checked","checked"); 
+        $('#anon').iphoneStyle("refresh");
+    }
+    var tags = "<?php if (isset($this->tags)) echo $this->tags; ?>";
+    SetTags(tags);
+    var phoneNo = "<?php if (isset($this->phone)) echo $this->phone; ?>";
+    if (phoneNo != undefined && phoneNo.length > 0)
+    {
+        $('#phone_no').val(phoneNo);
+        $('#phone_no').removeClass('example');
+    }
+//});
+
+</script>
+
+

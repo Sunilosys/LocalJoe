@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/LocalJoe/!svn/ver/993/trunk/library/Templates
+END
+email.html.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/892/trunk/library/Templates/email.html.php
+END
+email.text.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/898/trunk/library/Templates/email.text.php
+END
+saved_search_html.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Templates/saved_search_html.php
+END
+multiselect.html.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Templates/multiselect.html.php
+END
+short_list_html.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Templates/short_list_html.php
+END
+range.html.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Templates/range.html.php
+END
+home_post_short_html.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/981/trunk/library/Templates/home_post_short_html.php
+END
+leftnav.html.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Templates/leftnav.html.php
+END
+select.html.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Templates/select.html.php
+END
+long_html.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Templates/long_html.php
+END
+short_html.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/950/trunk/library/Templates/short_html.php
+END
+add_remove_shortlist_html.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/766/trunk/library/Templates/add_remove_shortlist_html.php
+END
+profile_post_short_html.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Templates/profile_post_short_html.php
+END

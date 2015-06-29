@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify
+END
+ImportProcessor.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/ImportProcessor.php
+END
+Lines.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/Lines.php
+END
+Build.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/Build.php
+END
+Logger.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/Logger.php
+END
+CommentPreserver.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/CommentPreserver.php
+END
+Source.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/Source.php
+END
+DebugDetector.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/DebugDetector.php
+END
+YUICompressor.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/YUICompressor.php
+END
+HTML.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/HTML.php
+END
+Packer.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/Packer.php
+END
+CSS.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify/CSS.php
+END

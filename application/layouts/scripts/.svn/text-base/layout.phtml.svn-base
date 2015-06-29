@@ -1,0 +1,380 @@
+<?= $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>LocalJoe - <?= $this->partition; ?> classifieds for community, apartments, for sale, services, events and recruitment.</title>   
+        <meta http-equiv="Content-Type" content="text/css; charset=UTF-8"/>
+        <meta name="description" content="Localjoe provides local classifieds for jobs, housing, automobiles, services, local community, and events"/>
+        <meta name="keywords" content="localjoe, local joe, classifieds, jobs, housing, automobiles, services, events, community, education, unique stores, trade, barter" />
+        <script>
+            var editPost = false;
+            var dateformat = "<?php echo $this->dateformat ?>";
+            var phoneformat = "<?= $this->phoneformat; ?>";
+            var latitude = "<?= $this->latitude; ?>";
+            var longitude = "<?= $this->longitude; ?>";
+            var partition = "<?= $this->partition; ?>";
+            var userLoggedIn = "<?= $this->userLoggedIn; ?>";
+            var currencySymbol = "<?= $this->currencySymbol; ?>";
+            var finishText = "Create Post"; 
+            var facebook_app_id = "<?= $this->facebook_app_id; ?>";
+            var map;
+            var googleOpener;
+            var extensions;
+        </script>
+<link rel="stylesheet" type="text/css" href="/assets/fancybox/jquery.fancybox-1.3.4.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
+        <?php
+        echo $this->minifyHeadLink() // Whatever was already loaded from Controller.
+                ->prependStylesheet('/css/jquery.loadmask.css')// 6th
+                ->prependStylesheet('/css/skin.css')// 6th
+                ->prependStylesheet('/css/jquery.fileupload-ui.css') // 5th
+                ->prependStylesheet('/css/colorbox.css') // 4th
+                ->prependStylesheet('/css/jWizard.base.css') // 3rd
+                ->prependStylesheet('/css/smoothness/jquery-ui-1.8.16.custom.css') // 2nd
+                ->prependStylesheet('/css/jquery.fileupload-ui.css') // 1st
+                ->prependStylesheet('/css/bootstrap-image-gallery.min.css');
+        ?>	    
+        <link type="text/css" rel='stylesheet' href='/css/base.css'/>
+        <!--[if IE 8 ]>      <link type="text/css" rel='stylesheet' href='/css/ie8.css'>          <![endif]-->
+        <!--[if IE 9 ]>      <link type="text/css" rel='stylesheet' href='/css/ie.css'>          <![endif]-->
+        <!--[if (gt IE 9) ]> <link type="text/css" rel='stylesheet' href='/css/ie.css'>        <![endif]-->
+
+        <?php
+        echo $this->minifyHeadScript() // Whatever was already loaded from Controller.
+                ->prependFile('/js/jquery.loadmask.js')
+                ->prependFile('/js/markerwithlabel.js')
+                ->prependFile('/js/gmap-popup.js')
+                ->prependFile('/js/gmap3.js')
+                ->prependFile('http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places')
+                ->prependFile('/js/accounting.settings.js') // 7th
+                ->prependFile('/js/accounting.min.js') // 7th
+                ->prependFile('/js/twitter.js') // 7th
+                ->prependFile('/js/gmail.js')// 8th				
+                ->prependFile('/js/popuplib.js') // 7th
+                ->prependFile('/js/facebook.js') // 6th
+                ->prependFile('/js/iphone-style-checkboxes.js') // 2nd	
+                ->prependFile('/js/jquery.ba-bbq.min.js') // 3rd
+                ->prependFile('/js/slides.min.jquery.js') // 5th
+                ->prependFile('/js/jquery-ui.min.js') // 2nd
+                ->prependFile('/js/jquery.tools.min.js') // 1st
+                ->prependFile('/js/jquery.jcarousel.min.js')
+                ->prependFile('/js/jquery.min.js');
+        ?>
+        <script src="/js/oms.min.js"></script>
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+            google.load('visualization', '1', {packages: ['corechart']});
+        </script>
+    </head>
+
+    <body> 
+        <input type="hidden" id="sso_url" value='<?php echo $this->sso_url; ?>' name="sso_url" />
+        <input type="hidden" id="logged_in_username" name="logged_in_username" value='<?php echo $this->userName; ?>'></input>
+        <div id="fb-root"></div>       
+        <div>                                         
+            <div id='wrapper'>
+                <div id='header'>
+                    <div id='logo' onclick="window.location.href='#page=home'"></div>
+
+                    <div id="header-location-selection" class="menu">
+
+                        <a id='menu-location' class='drop'><?= $this->partition; ?></a>
+                        <div id='locations-finder' class='finder'>
+                            <div>
+                                <div id='locations-list'>
+                                    <div class='bystate findby selected'>
+                                        <ul><li>	
+                                                <div class='column' style="width:145px;">
+                                                    <ul>
+                                                        <li><b><a href='http://sf.localjoe.com'>United States</a></b></li>
+                                                        <li><a style="font-weight: normal;font-size:16px" href='http://sf.localjoe.com'>SF Bay Area</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class='column' style="width:145px">
+                                                    <ul>
+                                                        <li><b><a href='http://sg.localjoe.com'>Asia</a></b></li>
+                                                        <li><a style="font-weight: normal;font-size:16px" href='http://sg.localjoe.com'>Singapore</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li></ul>
+                                    </div> <!-- bystate -->
+                                </div> <!-- locations-list -->
+                            </div>
+                        </div><!-- locations-finder-->
+
+                    </div><!-- main-menu1 -->
+
+                    <?php echo $this->render('search.phtml') ?>   
+                    <?php echo $this->render('mainMenu.phtml') ?>                                                            
+                </div><!-- #header -->
+
+                <div  id="categoryAttr"></div>
+                <script language="JavaScript" type="text/javascript" src='/js/scripts.js'></script>  
+
+                <?php
+                $script0 = $this->minifyInlineScript() // Whatever was already loaded from Controller.
+                        ->prependFile('/js/reuters.js')
+                        ->prependFile('/js/phone_' . $this->country . '.js')
+                        ->prependFile('/js/textexttags.js') // 1st
+                        ->prependFile('/js/textext.js')
+                        ->prependFile('/js/signup.js') // 3rd
+                        ->prependFile('/js/search.tags.js') // 2nd                                    
+                        ->prependFile('/js/Ensure.js')
+                        ->prependFile('/js/jquery.ui.datepicker.validation.js') // 4th	
+                        ->prependFile('/js/jquery.validate.js') // 3rd
+                        ->prependFile('/js/jquery.md5.js')
+                        ->prependFile('/js/jquery.colorbox.js');
+
+                echo $script0;
+                ?>	                                                      
+                <div id='main'><?php echo $this->layout()->content; ?></div><!-- #main -->
+            </div><!-- #wrapper-->
+            <?php echo $this->render('footer.phtml') ?>
+        </div>
+
+    </body>                                                
+</html>
+<script>
+    <!--
+    function jsMailThisUrl(id, url)
+    {
+        var email_subject = 'Check this out! I found it on LocalJoe... ';
+        var email_body = document.getElementById(id).innerHTML;
+        var page_url = window.self.location.href.split( '?' )[0];
+        if(url != "" && url != undefined)
+
+        {
+            page_url = 'http://'+window.location.hostname + url;
+        }
+        //page_url = page_url + '?source=email_friend';
+        //var field = document.email_friend_script.address;
+        window.location = 'mailto:?subject=' +
+            escape( email_subject ) + '&body=' +
+            escape( email_body + ': ' + page_url );
+        //escape( document.title + ': ' + email_body + ': ' + page_url );
+    }
+    function jsSendMail(body, url)
+    {
+        var email_subject = 'Check this out! I found it on LocalJoe... ';
+        var email_body = body;
+        var page_url = url;                                                        
+        window.location = 'mailto:?subject=' +
+            escape( email_subject ) + '&body=' +
+            escape( email_body + ': ' + page_url );
+        //escape( document.title + ': ' + email_body + ': ' + page_url );
+    }
+    //-->
+
+    $('document').ready(function(){ 
+                                                       
+        try
+        {
+            //if (userLoggedIn == 0){
+                                
+            $.ajax({
+                type: "GET",   
+                cache:false,
+                dataType:"jsonp",
+                crossDomain:true,   
+                url: $("#sso_url").val() + "/checkIfAuthTokenExists.php",
+                success: function(data) {
+                    if (data.authenticationType == 'facebook')     
+                    {  
+                              
+                        //Check whether user has logged in to facebook
+                        if (userLoggedIn == 0)
+                        {
+                            if (typeof FB != 'undefined') 
+                            {
+                                FB.getLoginStatus(function(response) {
+                                                                        
+                                    if (response.status === 'connected') {
+                                        // the user is logged in and has authenticated your
+                                        // app, and response.authResponse supplies
+                                        // the user's ID, a valid access token, a signed
+                                        // request, and the time the access token 
+                                        // and signed request each expire                           
+                                        GetUserInfo("CheckStatus");             
+                                                                            
+                                                                            
+                                    } 
+                                });  
+                            }
+                        }
+                                
+                    } else if (data.authenticationType == 'google')     
+                    {
+                                                                                                                                        
+                        checkIfTokenExists('checkGoogleLogin');  
+                                                                                
+                    } else 
+                    {                                                                               
+                                                                                                   
+                        //Check whether website token exists for authentication type website                                 
+                        checkIfTokenExists('checWebSitekLogin');   
+                    }
+          
+                },
+                error:function (xhr, ajaxOptions, thrownError, request, error){
+                    if(xhr.readyState == 0 || xhr.status == 0) 
+                        return;  // it's not really an error
+                    else
+                    {
+                 
+                    } 
+                }    
+
+            });  
+                                                               
+                                
+            // }
+        }
+        catch(err)
+        {
+                        
+        }
+    });      
+
+    var locwidth = $('#menu-location').width();
+    $('#locations-list').css('backgroundPosition',(locwidth+154)+'px 0px');
+
+    (function($){
+        $.fn.overlayMask = function (action) {
+            var mask = this.find('.overlay-mask');
+
+            // Create the required mask
+
+            if (!mask.length) {
+                this.css({
+                    position: 'relative'
+                });
+                mask = $('<div class="overlay-mask"></div>');
+                mask.css({
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    top: '0px',
+                    left: '0px',
+                    zIndex: 100
+                }).appendTo(this);
+            }
+
+            // Act based on params
+
+            if (!action || action === 'show') {
+                mask.show();
+            } else if (action === 'hide') {
+                mask.hide();
+            }
+
+            return this;
+        };
+    })(jQuery)
+
+
+</script> 
+<script language="JavaScript" type="text/javascript" src='/js/BBQ.js'></script> 
+<script language="JavaScript" type="text/javascript" src='/js/tinymce/jscripts/tiny_mce/tiny_mce.js'></script>
+<!--<script language="JavaScript" type="text/javascript" src='/js/tinymceinit.js'></script>-->
+
+<script type="text/javascript">
+    function drawVisualization(postingId) {
+        // Create and populate the data table.
+        $.ajax({
+            global:false,
+            type: "GET",
+            url: "/post/poststatistics/",
+            data:"postingId=" + postingId  ,        
+            success: function(response){
+                      
+                      
+               
+                if (response != "")
+                {
+                   
+                    var obj = jQuery.parseJSON(response);  
+                          
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Task');
+                    data.addColumn('number', 'View');
+                    data.addColumn('number', 'Email to Friend');
+                    data.addColumn('number', 'Facebook Share');
+                    data.addColumn('number', 'Twitter Share');  
+                    data.addColumn('number', 'Response');  
+                    var totalViews = 0;
+                    var totalShares = 0;
+                    var totalResponses = 0;
+                    var maxVAxisValue = 0;
+                    for (var i = 0; i < obj.length ; i++)
+                    {
+                              
+                        totalViews = totalViews + parseInt(obj[i].view_count);
+                        totalResponses = totalResponses + parseInt(obj[i].response_count);
+                        totalShares = totalShares + parseInt(obj[i].fbshare_count) + parseInt(obj[i].email_count) + parseInt(obj[i].twitter_share_count);
+                        if (maxVAxisValue == 0)
+                            maxVAxisValue = parseInt(obj[i].view_count);
+                        else if (maxVAxisValue < parseInt(obj[i].view_count))
+                            maxVAxisValue = parseInt(obj[i].view_count);
+                              
+                        data.addRow(["", parseInt(obj[i].view_count),parseInt(obj[i].email_count),parseInt(obj[i].fbshare_count),parseInt(obj[i].twitter_share_count),parseInt(obj[i].response_count)]);
+                    }
+                   
+                   if (totalViews != 0 || totalShares != 0 || totalResponses != 0)
+                       {
+                    var title = "Total Views : " + totalViews + ", Total Shares : " + totalShares +  ", Total Responses : " + totalResponses ;
+                    maxVAxisValue = maxVAxisValue + 2;
+                    // Create and draw the visualization.
+                    new google.visualization.ColumnChart(document.getElementById('postStats_' + postingId)).
+                        draw(data,
+                    {title:title,
+                        width:535, height:350,
+                        backgroundColor:'none',
+                        fontName:'helvetica',
+                       
+                        legend:{position: 'right',textStyle:{color: '#555555', fontName: 'helvetica', fontSize: '13'}},
+                      
+                
+                        chartArea:{left:20,width:"67%",height:"80%"},
+                        titleTextStyle:{fontName: 'helvetica', fontSize: '13' ,color:'#555555'},
+                        
+                       bar: {groupWidth:'110'},
+                       vAxis:{format:'#,###'},
+                
+                
+                        vAxis:{maxValue:maxVAxisValue},
+                        hAxis: {title: ""}
+                    }
+
+                );
+                       }
+                   else
+                {
+                          
+                    $('#postStats_' + postingId).html('<div  style="color: #DD4B39;padding-left:168px;padding-top:20px">No Post Statistics Found.</div>');
+                    $('#postStats_' + postingId).show();
+                }
+                    
+                }
+                   else
+                {
+                          
+                    $('#postStats_' + postingId).html('<div  style="color: #DD4B39;padding-left:168px;padding-top:20px">No Post Statistics Found.</div>');
+                    $('#postStats_' + postingId).show();
+                }
+                
+                      
+            },
+            error:function (xhr, ajaxOptions, thrownError, request, error){
+                if(xhr.readyState == 0 || xhr.status == 0)
+                    return;  // it's not really an error
+                else
+                {
+                          
+                }
+            }
+        })
+              
+    }
+          
+
+    //google.setOnLoadCallback(drawVisualization);
+</script>              

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services
+END
+cacert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/cacert.pem
+END
+Twilio.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio.php
+END

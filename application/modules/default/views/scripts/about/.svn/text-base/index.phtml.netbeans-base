@@ -1,0 +1,35 @@
+<div id='main' class="account">
+<div class='box'>
+        <div id='breadcrumbs' class='header'>
+            <h2> 
+                <ul>
+                    <li><a href="/home/index"></a></li>
+                    <li><a href='http://sg.localjoe.com/blog/?page_id=10' target="cwindow">About Us</a></li>     
+                </ul>
+            </h2>
+        </div><!-- Breadcrumbs -->	
+        <div class='content'>
+            <div id='leftnav'>
+		<div class="profile-info" style='font-size: 12px;padding-bottom: 10px;'>
+                    <div class='group'>
+                        <h5>About Us</h5>
+                        <div class='content'>
+                            <a href='http://sg.localjoe.com/blog/?page_id=6' target="cwindow">Sample</a><br/><br/>
+			</div><!-- content -->
+			<div class='content'>
+			    <a href='http://sg.localjoe.com/blog/?page_id=27' target="cwindow">Suggest Category</a>
+			</div><!-- content -->
+
+		    </div><!-- group -->
+		 </div><!-- profile-info -->
+		<div id='widget-savedsearches' class='widget savedsearches'>                    
+		    <?php if (isset($this->savedSearchHtml)) echo $this->savedSearchHtml; ?>
+                </div><!-- #widget-->
+            </div><!-- #leftnav-->
+	    <div id='content' class='search' style="height:730px">
+	      <iframe name="cwindow" frameborder=none width=100% height=100% src="http://sg.localjoe.com/blog/?page_id=10"></iframe>
+	    </div><!-- #content -->
+	</div><!-- .content -->
+	<br style='clear:both;'>
+</div><!-- box -->
+</div>

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio
+END
+InstanceResource.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/InstanceResource.php
+END
+Page.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Page.php
+END
+RestException.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/RestException.php
+END
+Twiml.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Twiml.php
+END
+RequestValidator.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/RequestValidator.php
+END
+PartialApplicationHelper.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/PartialApplicationHelper.php
+END
+Capability.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Capability.php
+END
+ListResource.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/ListResource.php
+END
+TinyHttp.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/TinyHttp.php
+END
+Resource.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Resource.php
+END
+AutoPagingIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/AutoPagingIterator.php
+END

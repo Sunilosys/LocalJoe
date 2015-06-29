@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib
+END
+apache-solr-analysis-extras-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-analysis-extras-3.5.0.jar
+END
+apache-solr-core-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-core-3.5.0.jar
+END
+apache-solr-solrj-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-solrj-3.5.0.jar
+END
+geronimo-stax-api_1.0_spec-1.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/geronimo-stax-api_1.0_spec-1.0.1.jar
+END
+apache-solr-test-framework-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-test-framework-3.5.0.jar
+END
+apache-solr-uima-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-uima-3.5.0.jar
+END
+mysql-connector-java-5.1.18-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/mysql-connector-java-5.1.18-bin.jar
+END
+apache-solr-langid-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-langid-3.5.0.jar
+END
+apache-solr-velocity-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-velocity-3.5.0.jar
+END
+apache-solr-cell-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-cell-3.5.0.jar
+END
+apache-solr-clustering-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-clustering-3.5.0.jar
+END
+apache-solr-dataimporthandler-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-dataimporthandler-3.5.0.jar
+END
+apache-solr-dataimporthandler-extras-3.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/LocalJoe/!svn/ver/696/trunk/solr/Lib/apache-solr-dataimporthandler-extras-3.5.0.jar
+END

@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/LocalJoe/!svn/ver/995/trunk/application/models
+END
+LjCountry.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjCountry.php
+END
+LjConstants.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/991/trunk/application/models/LjConstants.php
+END
+LjImageCopy.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjImageCopy.php
+END
+LjAuthenticationMethod.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjAuthenticationMethod.php
+END
+LjImage.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjImage.php
+END
+LjRegion.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjRegion.php
+END
+LjRating.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjRating.php
+END
+LjAddress.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/173/trunk/application/models/LjAddress.php
+END
+LjPostingImage.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/LocalJoe/!svn/ver/53/trunk/application/models/LjPostingImage.php
+END
+LjMetro.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjMetro.php
+END
+LjPostingStatus.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjPostingStatus.php
+END
+LjParentCategory.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjParentCategory.php
+END
+LjSavedSearch.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/LocalJoe/!svn/ver/425/trunk/application/models/LjSavedSearch.php
+END
+LjBaseModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/1029/trunk/application/models/LjBaseModel.php
+END
+LjSqlConstants.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/173/trunk/application/models/LjSqlConstants.php
+END
+LjCategoryAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjCategoryAttribute.php
+END
+LjPostingResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/995/trunk/application/models/LjPostingResponse.php
+END
+LjFriend.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjFriend.php
+END
+LjPostingAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjPostingAttribute.php
+END
+LjCity.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/LocalJoe/!svn/ver/23/trunk/application/models/LjCity.php
+END
+LjFolder.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjFolder.php
+END
+LjTag.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjTag.php
+END
+LjCategory.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjCategory.php
+END
+LjPostingView.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjPostingView.php
+END
+LjFolderPosting.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/672/trunk/application/models/LjFolderPosting.php
+END
+LjPostingTag.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/56/trunk/application/models/LjPostingTag.php
+END
+LjState.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjState.php
+END
+LjPosting.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/1029/trunk/application/models/LjPosting.php
+END
+LjImageType.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjImageType.php
+END
+LjFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjFormat.php
+END
+LjCategoryAttrValues.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjCategoryAttrValues.php
+END
+LjUserInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/1029/trunk/application/models/LjUserInfo.php
+END
+LjRatingScale.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/9/trunk/application/models/LjRatingScale.php
+END

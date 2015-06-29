@@ -1,0 +1,20 @@
+.box, .searchwrap, #homewrap .widget, .photobin > ul > li{
+zoom: 1;
+filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=1, OffY=0, Color=#eeeeee),
+progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=1, Color=#eeeeee),
+progid:DXImageTransform.Microsoft.DropShadow(OffX=-1, OffY=0, Color=#eeeeee),
+progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=-1, Color=#eeeeee);   
+}
+#searchform a.button {height: 21px;}
+
+.scrollup{border: 1px solid #ccc;}
+
+input.dropdown{
+}
+.createpost .jw-menu .ui-state-disabled a,
+.createpost .jw-menu .ui-state-disabled {opacity: 1 !important; color: #666; filter:alpha(opacity=100);}
+
+.iPhoneCheckContainer label {
+border: 1px solid #999;    
+    
+}

@@ -1,0 +1,83 @@
+10
+
+dir
+1006
+http://ebdwinserver.ebusiness.local:8080/svn/LocalJoe/trunk/application
+http://ebdwinserver.ebusiness.local:8080/svn/LocalJoe
+
+
+
+2013-01-04T00:36:47.377871Z
+1006
+sunil_salunkhe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e3be1608-340d-4a40-8072-197e8bf26911
+
+layouts
+dir
+
+models
+dir
+
+services
+dir
+
+Bootstrap.php
+file
+1031
+
+
+
+2013-02-25T18:44:36.000000Z
+3d4e14d8cf7b2ad15deb97c0df6e06b6
+2013-03-21T00:00:10.289728Z
+1031
+sunil_salunkhe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5067
+
+languages
+dir
+
+Resource
+dir
+
+configs
+dir
+
+modules
+dir
+

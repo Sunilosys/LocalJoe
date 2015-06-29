@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/401/trunk/application/modules/api/views/helpers
+END
+MinifyHeadLink.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/LocalJoe/!svn/ver/401/trunk/application/modules/api/views/helpers/MinifyHeadLink.php
+END
+MinifyInlineScript.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/LocalJoe/!svn/ver/401/trunk/application/modules/api/views/helpers/MinifyInlineScript.php
+END
+MinifyHeadScript.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/LocalJoe/!svn/ver/401/trunk/application/modules/api/views/helpers/MinifyHeadScript.php
+END

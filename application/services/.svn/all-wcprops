@@ -1,0 +1,635 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LocalJoe/!svn/ver/995/trunk/application/services
+END
+GetPostingById.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/609/trunk/application/services/GetPostingById.php
+END
+UpdateFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/UpdateFormat.php
+END
+CreatePostAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/CreatePostAttribute.php
+END
+GetShortlistsToAddPosting.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/LocalJoe/!svn/ver/798/trunk/application/services/GetShortlistsToAddPosting.php
+END
+GetParentCategories.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/LocalJoe/!svn/ver/816/trunk/application/services/GetParentCategories.php
+END
+GetRecentImportLogs.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/1030/trunk/application/services/GetRecentImportLogs.php
+END
+GetPostOwner.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/1008/trunk/application/services/GetPostOwner.php
+END
+DeleteImageCopy.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/52/trunk/application/services/DeleteImageCopy.php
+END
+DeleteCategory.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/DeleteCategory.php
+END
+RemovePostingFromShortList.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/643/trunk/application/services/RemovePostingFromShortList.php
+END
+AddFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/AddFormat.php
+END
+GetStates.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/GetStates.php
+END
+CreatePostingTag.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/57/trunk/application/services/CreatePostingTag.php
+END
+DeleteImage.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/52/trunk/application/services/DeleteImage.php
+END
+GetRegions.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/GetRegions.php
+END
+GetTagByName.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/609/trunk/application/services/GetTagByName.php
+END
+GetImageTypes.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/GetImageTypes.php
+END
+DeletePost.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/566/trunk/application/services/DeletePost.php
+END
+UpdatePostingStatusForNewUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/LocalJoe/!svn/ver/475/trunk/application/services/UpdatePostingStatusForNewUser.php
+END
+AddCategoryAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/AddCategoryAttribute.php
+END
+DeleteSavedSearch.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/449/trunk/application/services/DeleteSavedSearch.php
+END
+SetImageUrlNull.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/953/trunk/application/services/SetImageUrlNull.php
+END
+GetUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/609/trunk/application/services/GetUser.php
+END
+GetShortlists.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/655/trunk/application/services/GetShortlists.php
+END
+UpdateImportLog.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/1030/trunk/application/services/UpdateImportLog.php
+END
+GetSavedSearches.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/609/trunk/application/services/GetSavedSearches.php
+END
+GetFacetFieldsByParentCatId.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/LocalJoe/!svn/ver/584/trunk/application/services/GetFacetFieldsByParentCatId.php
+END
+SaveViewShareEmail.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/841/trunk/application/services/SaveViewShareEmail.php
+END
+DeleteCategoryAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/DeleteCategoryAttribute.php
+END
+GetPostTagByTagId.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/609/trunk/application/services/GetPostTagByTagId.php
+END
+UpdateShortHtml.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/189/trunk/application/services/UpdateShortHtml.php
+END
+GetSpamPosts.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/1030/trunk/application/services/GetSpamPosts.php
+END
+UpdateParentCategory.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/UpdateParentCategory.php
+END
+DeletePostAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/LocalJoe/!svn/ver/600/trunk/application/services/DeletePostAttribute.php
+END
+GetFacetFieldsByCatIds.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/584/trunk/application/services/GetFacetFieldsByCatIds.php
+END
+CheckPostSpamFlag.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/800/trunk/application/services/CheckPostSpamFlag.php
+END
+AddParentCategory.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/AddParentCategory.php
+END
+DeleteUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/DeleteUser.php
+END
+GetFolderPostings.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/794/trunk/application/services/GetFolderPostings.php
+END
+GetPostTags.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/LocalJoe/!svn/ver/324/trunk/application/services/GetPostTags.php
+END
+GetAllPostingsForUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/1035/trunk/application/services/GetAllPostingsForUser.php
+END
+GetFacetFieldsByParentCatName.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/LocalJoe/!svn/ver/744/trunk/application/services/GetFacetFieldsByParentCatName.php
+END
+GetPostingImages.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/936/trunk/application/services/GetPostingImages.php
+END
+LjSession.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/LjSession.php
+END
+GetMetros.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/GetMetros.php
+END
+GetPostAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/600/trunk/application/services/GetPostAttribute.php
+END
+CreatePostingImage.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/52/trunk/application/services/CreatePostingImage.php
+END
+GetCountries.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/GetCountries.php
+END
+GetUserDefaultLocation.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/511/trunk/application/services/GetUserDefaultLocation.php
+END
+CreateSavedSearch.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/426/trunk/application/services/CreateSavedSearch.php
+END
+GetFacetFieldsByCatNames.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/LocalJoe/!svn/ver/744/trunk/application/services/GetFacetFieldsByCatNames.php
+END
+UpdateCategory.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/UpdateCategory.php
+END
+FlagPostingAsSpam.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/800/trunk/application/services/FlagPostingAsSpam.php
+END
+AddParentCategoryAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/AddParentCategoryAttribute.php
+END
+UpdateImage.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/52/trunk/application/services/UpdateImage.php
+END
+AddCategory.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/AddCategory.php
+END
+UpdateLongHtml.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/324/trunk/application/services/UpdateLongHtml.php
+END
+AddCategoryAttributeValidValue.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/AddCategoryAttributeValidValue.php
+END
+GetCategoryAttrValues.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/GetCategoryAttrValues.php
+END
+UpdatePost.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/600/trunk/application/services/UpdatePost.php
+END
+GetRecentLogins.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/1030/trunk/application/services/GetRecentLogins.php
+END
+DeleteParentCategoryAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/DeleteParentCategoryAttribute.php
+END
+GetRecentPostsImages.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/954/trunk/application/services/GetRecentPostsImages.php
+END
+CreateTag.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/57/trunk/application/services/CreateTag.php
+END
+GetAllPostings.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/891/trunk/application/services/GetAllPostings.php
+END
+CreateImportLog.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/1030/trunk/application/services/CreateImportLog.php
+END
+DeleteCategoryAttributeValidValue.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/DeleteCategoryAttributeValidValue.php
+END
+GetPostingsByIds.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/GetPostingsByIds.php
+END
+checkIfActivePostingForUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/52/trunk/application/services/checkIfActivePostingForUser.php
+END
+UpdateCategoryAtrribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/UpdateCategoryAtrribute.php
+END
+GetRecentlyPostedItems.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/947/trunk/application/services/GetRecentlyPostedItems.php
+END
+DeleteAddress.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/600/trunk/application/services/DeleteAddress.php
+END
+CreatePost.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/CreatePost.php
+END
+DeleteFormat.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/DeleteFormat.php
+END
+CreateShortList.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/643/trunk/application/services/CreateShortList.php
+END
+GetLastPostForUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/918/trunk/application/services/GetLastPostForUser.php
+END
+UpdateAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/995/trunk/application/services/UpdateAction.php
+END
+GetCities.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/23/trunk/application/services/GetCities.php
+END
+UpdateUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/LocalJoe/!svn/ver/1030/trunk/application/services/UpdateUser.php
+END
+GetPostsWithResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/995/trunk/application/services/GetPostsWithResponse.php
+END
+GetCategoryAttributes.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/GetCategoryAttributes.php
+END
+GetCategories.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/857/trunk/application/services/GetCategories.php
+END
+GetStatistics.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/995/trunk/application/services/GetStatistics.php
+END
+UpdatePostStatus.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/566/trunk/application/services/UpdatePostStatus.php
+END
+GetTags.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/LocalJoe/!svn/ver/52/trunk/application/services/GetTags.php
+END
+GetPostingsWithoutShortHtml.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/LocalJoe/!svn/ver/991/trunk/application/services/GetPostingsWithoutShortHtml.php
+END
+GetEmphasizedAttributes.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/LocalJoe/!svn/ver/464/trunk/application/services/GetEmphasizedAttributes.php
+END
+CreateImageCopy.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/CreateImageCopy.php
+END
+CreateUser.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/CreateUser.php
+END
+GetShortlistsToRemovePosting.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/LocalJoe/!svn/ver/991/trunk/application/services/GetShortlistsToRemovePosting.php
+END
+GetUserActivities.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/1035/trunk/application/services/GetUserActivities.php
+END
+GetImages.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/614/trunk/application/services/GetImages.php
+END
+CreateImage.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/CreateImage.php
+END
+RemoveSpamFlag.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/800/trunk/application/services/RemoveSpamFlag.php
+END
+CreateAddress.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/CreateAddress.php
+END
+DeletePostingImage.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/52/trunk/application/services/DeletePostingImage.php
+END
+GetFacetFieldsByCatId.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/216/trunk/application/services/GetFacetFieldsByCatId.php
+END
+DeleteParentCategory.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/DeleteParentCategory.php
+END
+AddPostingToShortList.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/643/trunk/application/services/AddPostingToShortList.php
+END
+DeleteShortList.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/LocalJoe/!svn/ver/766/trunk/application/services/DeleteShortList.php
+END
+UpdateParentCategoryAttribute.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/UpdateParentCategoryAttribute.php
+END
+UpdateCategoryAttributeValidValue.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/LocalJoe/!svn/ver/1018/trunk/application/services/UpdateCategoryAttributeValidValue.php
+END
+GetImageCopies.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/GetImageCopies.php
+END
+UpdateAddress.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/14/trunk/application/services/UpdateAddress.php
+END
+CreatePostResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/995/trunk/application/services/CreatePostResponse.php
+END

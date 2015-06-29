@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests
+END
+ResourcesTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests/ResourcesTest.php
+END
+TwimlTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests/TwimlTest.php
+END
+Bootstrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests/Bootstrap.php
+END
+RequestValidatorTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests/RequestValidatorTest.php
+END
+phpunit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests/phpunit.xml
+END
+CapabilityTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests/CapabilityTest.php
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests/README
+END
+TwilioTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/tests/TwilioTest.php
+END

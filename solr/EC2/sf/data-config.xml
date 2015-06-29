@@ -1,0 +1,41 @@
+<dataConfig>
+	<dataSource name="mysql" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://lm1rg4zogb39t29.cotikijfnrwz.us-east-1.rds.amazonaws.com:3306/lj_partition_1" user="localjoe" password="localjoe" batchSize="-1" />
+<document>
+	<entity name="all_rentals" pk="posting_id_i" dataSource="mysql"	query="SELECT *,
+       ((if(ifnull(rent_per_day_ti, 0) = 0, 0, rent_per_day_ti * 365))
+        + (if(ifnull(rent_per_week_ti, 0) = 0, 0, rent_per_week_ti * 52))
+        + (if(ifnull(rent_per_month_ti, 0) = 0, 0, rent_per_month_ti * 12))
+        + (if(ifnull(rent_per_year_ti, 0) = 0, 0, rent_per_year_ti * 1))
+        + (if(ifnull(rent_per_sq_foot_ti, 0) = 0, 0, rent_per_sq_foot_ti * 1)))
+          AS rent_i
+	 FROM all_rentals" deltaImportQuery="SELECT *,
+       ((if(ifnull(rent_per_day_ti, 0) = 0, 0, rent_per_day_ti * 365))
+        + (if(ifnull(rent_per_week_ti, 0) = 0, 0, rent_per_week_ti * 52))
+        + (if(ifnull(rent_per_month_ti, 0) = 0, 0, rent_per_month_ti * 12))
+        + (if(ifnull(rent_per_year_ti, 0) = 0, 0, rent_per_year_ti * 1))
+        + (if(ifnull(rent_per_sq_foot_ti, 0) = 0, 0, rent_per_sq_foot_ti * 1)))
+          AS rent_i
+	 FROM all_rentals where posting_id_i='${dataimporter.delta.posting_id_i}'" deltaQuery="select posting_id_i from all_rentals where date_created_dt &gt; '${dataimporter.last_index_time}' or date_updated_dt &gt; '${dataimporter.last_index_time}'">
+	</entity>
+	<entity name="all_coupons" pk="posting_id_i" dataSource="mysql"	query="select  *,
+	(if(ifnull(original_price_ti,0)=0,if(ifnull(discount_dollar_tf,0)=0,null,discount_dollar_tf),if(ifnull(discount_dollar_tf,0)=0,(original_price_ti-((discount_percent_tf*original_price_ti)/100)),discount_dollar_tf))) as discount_f  from all_coupons" deltaImportQuery="select  *,
+	(if(ifnull(original_price_ti,0)=0,if(ifnull(discount_dollar_tf,0)=0,null,discount_dollar_tf),if(ifnull(discount_dollar_tf,0)=0,(original_price_ti-((discount_percent_tf*original_price_ti)/100)),discount_dollar_tf))) as discount_f  from all_coupons where posting_id_i='${dataimporter.delta.posting_id_i}'"    deltaQuery="select posting_id_i from all_coupons where date_created_dt &gt; '${dataimporter.last_index_time}' or date_updated_dt &gt; '${dataimporter.last_index_time}'" transformer="TemplateTransformer">
+	</entity>
+	<entity name="all_automotive" pk="posting_id_i" dataSource="mysql"	query="select  *  from all_automotive" deltaImportQuery="select * from all_automotive where posting_id_i='${dataimporter.delta.posting_id_i}'"    deltaQuery="select posting_id_i from all_automotive where date_created_dt &gt; '${dataimporter.last_index_time}' or date_updated_dt &gt; '${dataimporter.last_index_time}'"  transformer="TemplateTransformer">
+	</entity>
+	<entity name="all_jobs" pk="posting_id_i" dataSource="mysql"	query="select  *,((if(ifnull(salary_daily_ti,0)=0,0,salary_daily_ti*365))
+	+(if(ifnull(salary_weekly_ti,0)=0,0,salary_weekly_ti*52))
+	+(if(ifnull(salary_bi_weekly_ti,0)=0,0,salary_bi_weekly_ti*104))
+	+(if(ifnull(salary_monthly_ti,0)=0,0,salary_monthly_ti*12))
+	+(if(ifnull(salary_annually_ti,0)=0,0,salary_annually_ti*1))) 
+	as salary_i from all_jobs" deltaImportQuery="select * ,((if(ifnull(salary_daily_ti,0)=0,0,salary_daily_ti*365))
+	+(if(ifnull(salary_weekly_ti,0)=0,0,salary_weekly_ti*52))
+	+(if(ifnull(salary_bi_weekly_ti,0)=0,0,salary_bi_weekly_ti*104))
+	+(if(ifnull(salary_monthly_ti,0)=0,0,salary_monthly_ti*12))
+	+(if(ifnull(salary_annually_ti,0)=0,0,salary_annually_ti*1)))
+	as salary_i from all_jobs where posting_id_i='${dataimporter.delta.posting_id_i}'"    deltaQuery="select posting_id_i from all_jobs where date_created_dt &gt; '${dataimporter.last_index_time}' or date_updated_dt &gt; '${dataimporter.last_index_time}'"  transformer="TemplateTransformer">
+	</entity>
+	<entity name="all_services" pk="posting_id_i" dataSource="mysql"	query="select  *  from all_services" deltaImportQuery="select * from all_services where posting_id_i='${dataimporter.delta.posting_id_i}'"    deltaQuery="select posting_id_i from all_services where date_created_dt &gt; '${dataimporter.last_index_time}' or date_updated_dt &gt; '${dataimporter.last_index_time}'"  transformer="TemplateTransformer">
+	</entity>
+</document>
+</dataConfig>

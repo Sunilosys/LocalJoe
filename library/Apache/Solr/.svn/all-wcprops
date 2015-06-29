@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr
+END
+HttpTransportException.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr/HttpTransportException.php
+END
+ParserException.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr/ParserException.php
+END
+NoServiceAvailableException.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr/NoServiceAvailableException.php
+END
+Document.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr/Document.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr/Exception.php
+END
+Response.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr/Response.php
+END
+Service.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr/Service.php
+END
+InvalidArgumentException.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/LocalJoe/!svn/ver/217/trunk/library/Apache/Solr/InvalidArgumentException.php
+END

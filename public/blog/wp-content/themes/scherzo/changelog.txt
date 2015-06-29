@@ -1,0 +1,84 @@
+#   Changelog
+
+## Version 2.41, released 11 December 2011
+
+### Changes from version 2.3
+
+* HTML5 shiv and css3-mediaqueries js links now placed within IE conditional comments in header.php
+* HTML5 shiv and css3-mediaqueries js linked to Google Code hosting
+* theme therefore scales in IE5+ and all modern browsers
+* moved wp_footer hook back out of #site-footer (as per WP theme guidelines)
+* changed body line-height to 1.5. It's now unitless.
+* improved header scaling at small viewport widths (with thanks to Manuel Martensen @ http://manuelmartensen.com/)
+* added a 'wide' class so images can stretch across main column and sidebar column
+* added simple support for post formats (aside, image, link, quote, audio and video)
+* improved print stylesheet
+* typographical tweeks and improvements
+* sidebar markup more logical: one aside with divs for front, universal and single widget areas
+* differentiated narrow screen and wide screen blockquote styling
+
+## 	Version 2.3, released 10 June 2011
+
+### Changes from version 2.2
+
+* moved wp_footer hook within #site-footer so it can also be used HTML as well as js
+* resized sidebar so it's now correct length
+* removed css-mediaqueries js to save mobile devices loading ~20k (not enqueued in functions.php). NOTE: IE<9 now displays a one column mobile version
+* tidied up article footers, adding a couple of rules to separate them from the article content
+* tidied up floating image margins and added a border to them
+
+## 	Version 2.2, released 23 May 2011
+
+### Changes from version 2.1
+*	fixed bug where header text was displayed even if 'Display text' switch was set to no in admin area
+*	made whole header area a link to the home page
+*	used :last-child to remove border from the last item in a nested list, thereby getting rid of ugly double borders
+*	removed bottom padding from same list item
+*	added a margin to the top of the page (#wrapper in style.css)
+*	got rid of hgroup and h2 descendant as per new HTML spec; replaced with div and p respectively
+
+##	Version 2.1, released 17 April 2011
+
+###	Changes from version 2.0
+*	set sidebar font size to 13px, which means that content that isn't wrapped in p or li will display at 13px as opposed to 16px
+*	set sidebar image max-width to 100%
+*	changed theme URI in style.css
+*	added author link to post meta section
+
+## 	Version 2.0, released 29 March 2011
+
+###	Changes from version 1.6
+*	added a 'responsive design'. Used media queries to target wider viewports
+*	added css3-mediaqueries.js to force IE<9 to understand media queries. Enqueued and registered in functions.php
+*	HTML5shiv js links to Google Code. Enqueued and registered in functions.php
+*	heading typography changed
+*	fixed widget padding in sidebar; margins between widgets collapsed before
+*	added max-width support for content images to IE6 using _width hack in CSS
+*	made all functions pluggable in functions.php
+*	added a custom header
+*	added a 'Continue reading' link to front page posts for 'Read more' shortcodes in posts
+
+###	Version 2.0 Known issues
+*	child themes don't load js so IE<9 displays mobile layout when you use a child theme
+*	iOS on iPhone 3-4 doesn't limit Georgia scaling in landscape, so body copy looks quite large
+
+## 	Version 1.6, released 08 February 2011
+
+###	Changes from version 1.5
+*	changed line height to 18px (1.351em) in picture captions, allowed tags paragraph, entry footers and the site footer
+*	changed padding around sidebar lists
+*	changed sidebar list links to display:inline, making for better link lists
+*	made the comments number in entry headers in index.php a link to the comments form in single.php
+
+
+##	Version 1.5, released 30 January 2011
+
+### Changes from version 1.4
+*	functions.php no longer creates a custom menu area
+*	added a unit to the line-height to create a better vertical rhythm
+*	restyled lists so they're no longer indented
+*	restyled entry-content headings so they keep to the vertical rhythm (replaced margins on headings with padding so 		no margin collapse)
+*	wrapped comments in a div rather than section to improve the document outline
+*	resized comment area headings
+*	changed sidebar line height to 18px (1.125em)
+*	secondary text and sidebar body text changed to 13px (0.833em) Georgia

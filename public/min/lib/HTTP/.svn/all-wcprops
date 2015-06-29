@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/HTTP
+END
+Encoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/HTTP/Encoder.php
+END
+ConditionalGet.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/HTTP/ConditionalGet.php
+END

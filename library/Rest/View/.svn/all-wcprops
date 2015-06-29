@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/View
+END
+Data.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/View/Data.php
+END
+Json.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/View/Json.php
+END
+Pdf.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/View/Pdf.php
+END
+Xml.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/View/Xml.php
+END

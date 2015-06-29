@@ -1,0 +1,150 @@
+
+
+
+<?php
+if ($this->validUser) {
+    ?>
+
+    <div class="admin">
+
+
+        <div class='box'>
+            <div id='breadcrumbs' class='header'>
+                <h2> 
+                    <ul>
+                        <li><a href="#page=home"></a></li>
+                        <li><a href="#">Administration</a></li>     
+                    </ul>
+                </h2>
+            </div><!-- Breadcrumbs -->	
+            <div class='content'>
+           
+
+                <div id='content' style="width:930px;border-left:none" class="search">
+
+                    <div>
+                        <div id='adminTabs' name="adminTabs" style="display:block">
+                            <div style="float:left;width:200px">
+                            <ul style="width:180px">
+                                <li><a  href='#tabs-1'>Export/Import</a></li>
+                                <li><a  href='#tabs-2'>Recent Posts</a></li>
+                                <li><a  href='#tabs-3'>Recent Logins</a></li>
+                                <li><a  href='#tabs-4'>Spammed Posts</a></li>
+                            </ul>
+                            </div>
+                            <div style="float:right;width:710px">
+                            <div id='tabs-1' style="width:auto;">
+                                <div class="admin-section" style="text-align:left;min-height:650px;">
+
+                                    <div class="admin-heading" style="
+                                         margin: 5px 0px;padding:15px;padding-left:0px"> 
+                                        <h2 style="font-size:16px" class="title">Manage Local Joe Categories</h2>
+                                        <h2 style="font-size:13px;font-weight:normal;padding-top:10px" class="title">Click on Export to export the existing categories in XML format. To update the existing categories, modify the exported XML file and import it.</h2>
+                                    </div>
+
+
+                                    <div class='buttons' style='text-align: left;padding-left:0px;width:370px;padding-top:10px'>
+<!--                                        <div style="float:left;display:inline-block;margin-right:25px">
+                                             <a class="upload-image-mailbox button primary small" href="#">Mailbox Reader</a>
+                                                    
+                                        </div>-->
+                                         <div style="float:left;display:inline-block">
+                                                <a class="export button primary small" href="/admin/export">Export</a>
+                                            
+                                        </div>
+                                        <div style="float:right;display:inline-block">
+                                            <form id="xmlFileUpload" name="xmlFileUpload" action="/admin/import" method="POST"  enctype="multipart/form-data">
+
+                                                <a  id='import-file-link' name='import-file-link' class="import button primary small" href="#">Import</a>
+
+                                                <input type="file" id="importFile" name="importFile" class="file-input">
+                                            </form> 
+                                        </div>
+                                        
+                                    </div>
+                                    <div>
+                                        <label id="admin_ui_error" style="width:600px;display:none;padding-left:0px" class="error"></label>
+
+                                    </div>
+
+                                    <div class='import-export-list' style="display:inline-block;padding-left:0px">
+                                        <div style="
+                                             margin: 5px 0px;padding:10px;padding-left:0px"> 
+                                            <h2 style="font-size:16px" class="title">Recent Imports</h2>
+
+                                        </div>
+                                        <div style="width:100%"><ul>
+                                                <li>
+                                                    <table style="width:800px;font-weight:bold">
+                                                        <tr>
+                                                            <td style="width:250px"><h2 style="font-size:15px;height:22px" class="title">Date Imported</h2></td>
+                                                            <td style="width:300px"><h2 style="font-size:15px;height:22px" class="title">Download URL</h2>   
+                                                            </td>
+                                                            <td style="width:250px"><h2 style="font-size:15px;height:22px" class="title">Imported By</h2></td>
+                                                        </tr>
+                                                    </table>
+                                                </li>
+                                                <br>
+                                                <?php
+                                                foreach ($this->importLogs as $key => $val) {
+                                                    ?>                                 
+
+                                                    <li>
+                                                        <table style="width:800px;height:20px">
+                                                            <tr>
+                                                                <td style="width:250px"><?php echo $val['date_imported'] ?></td>
+                                                                <td style="width:300px">   
+                                                                    <a href="/admin/download?importId=<?php echo $val['import_id'] ?>" id='import_<?php echo $val['import_id'] ?>' name='import_<?php echo $val['import_id'] ?>'>Download</a>
+                                                                </td>
+                                                                <td style="width:250px"><?php echo $val['first_name'] . ' ' . $val['last_name'] ?></td>
+                                                            </tr>
+                                                        </table>
+                                                    </li>
+
+                                                <?php } ?>
+                                            </ul></div>   
+
+                                    </div>
+
+                                </div>
+                                <script language="JavaScript" type="text/javascript" src='/js/jquery.form.js'></script>
+                                <script language="JavaScript" type="text/javascript" src='/js/admin.js'></script>
+                            </div>
+                            <div id='tabs-2' style="width:auto;">
+
+                                <div id="recentPosts" class="items">
+
+                                </div>
+                                <div id="last_post_loader">&nbsp;</div>
+                            </div>
+                            <div id='tabs-3' style="width:auto;">
+                                  <div id="recentLogins" class="items">
+
+                                </div>
+                                <div id="last_recent_login_loader">&nbsp;</div>
+                                
+                            </div>
+                            <div id='tabs-4' style="width:auto;">
+                                
+                                  <div id="spamPosts" class="items">
+
+                                </div>
+                                <div id="last_spam_post_loader">&nbsp;</div>
+                            </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- #Content-->
+            </div> <!-- .content -->
+            <br style='clear:both;'>
+        </div> <!-- .box -->
+    <?php } else { ?>
+
+        <div class='instruction'>
+            <label id="pageError" style="width:800px;padding-left:0px;text-align: left" class="error">Please login to access this page. If you have already logged in then you don't have privilege to access this page.</label> 
+        </div>
+    <?php } ?>
+     <input type="hidden" id="numFound" name="numFound" value='0'></input>
+                                           

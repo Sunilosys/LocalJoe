@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/991/trunk/application/modules/default/views/scripts/user
+END
+checkauth.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/LocalJoe/!svn/ver/401/trunk/application/modules/default/views/scripts/user/checkauth.phtml
+END
+activate.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/LocalJoe/!svn/ver/880/trunk/application/modules/default/views/scripts/user/activate.phtml
+END
+profile.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/LocalJoe/!svn/ver/1018/trunk/application/modules/default/views/scripts/user/profile.phtml
+END
+signup.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/LocalJoe/!svn/ver/401/trunk/application/modules/default/views/scripts/user/signup.phtml
+END
+index.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/LocalJoe/!svn/ver/401/trunk/application/modules/default/views/scripts/user/index.phtml
+END
+manage.phtml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/LocalJoe/!svn/ver/1035/trunk/application/modules/default/views/scripts/user/manage.phtml
+END

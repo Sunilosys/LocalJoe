@@ -1,0 +1,95 @@
+﻿DROP TABLE IF EXISTS `source`;
+CREATE TABLE `source` (
+  `source_id` INT(32) NOT NULL AUTO_INCREMENT,
+  `source_code` VARCHAR(255) NOT NULL,
+  `source_name` VARCHAR(255) NOT NULL,
+  `api_base_url` VARCHAR(255) NOT NULL,
+  `api_auth_key` VARCHAR(255) NOT NULL,
+  `api_response_format` VARCHAR(32) NOT NULL,
+  PRIMARY KEY (`source_id`)
+)
+ENGINE = InnoDB;
+
+DROP TABLE IF EXISTS `api_map`;
+CREATE TABLE `api_map` (
+  `api_id` INT(32) NOT NULL AUTO_INCREMENT,
+  `source_id` INT(32) NOT NULL,
+  `api_parameters` VARCHAR(255) NOT NULL,
+ `search_text` VARCHAR(255),
+`last_import_date` DATETIME,
+  PRIMARY KEY (`api_id`),
+  CONSTRAINT `FK_api_map_1` FOREIGN KEY `FK_api_map_1` (`source_id`)
+    REFERENCES `source` (`source_id`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT
+)
+ENGINE = InnoDB;
+
+
+DROP TABLE IF EXISTS `category_mapping`;
+
+CREATE TABLE `category_mapping` (
+  `mapping_id` INT(32) NOT NULL AUTO_INCREMENT,
+  `api_id` INT(32) NOT NULL,
+  `category_id` INT(32) NOT NULL,
+  PRIMARY KEY (`mapping_id`),
+  CONSTRAINT `FK_category_mapping_1` FOREIGN KEY `FK_category_mapping_1` (`api_id`)
+    REFERENCES `api_map` (`api_id`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT,
+  CONSTRAINT `FK_category_mapping_2` FOREIGN KEY `FK_category_mapping_2` (`category_id`)
+    REFERENCES `category` (`category_id`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT
+)
+ENGINE = InnoDB;
+
+DROP TABLE IF EXISTS `import_data`;
+CREATE TABLE `import_data` (
+  `import_id` INT(32) NOT NULL AUTO_INCREMENT,
+  `external_key` VARCHAR(255) NOT NULL,
+  `source_id` INT(32) NOT NULL,
+  `category_id` INT(32),
+`content` LONGTEXT NOT NULL,	
+  `created_date` DATETIME NOT NULL,
+  `updated_date` DATETIME NOT NULL,
+  `status` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`import_id`),
+  CONSTRAINT `FK_import_data_1` FOREIGN KEY `FK_import_data_1` (`source_id`)
+    REFERENCES `source` (`source_id`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT,
+  CONSTRAINT `FK_import_data_2` FOREIGN KEY `FK_import_data_2` (`category_id`)
+    REFERENCES `category_mapping` (`category_id`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT
+)
+ENGINE = InnoDB;
+
+CREATE TABLE `lj_sf`.`import_data_attribute` (
+  `attribute_id` INT(32) NOT NULL AUTO_INCREMENT,
+  `import_id` INT(32) NOT NULL,
+  `attribute_name` VARCHAR(255) NOT NULL,
+  `attribute_group` VARCHAR(255),
+  `attribute_value` LONGTEXT,
+  PRIMARY KEY (`attribute_id`),
+  CONSTRAINT `FK_import_data_attribute_1` FOREIGN KEY `FK_import_data_attribute_1` (`import_id`)
+    REFERENCES `import_data` (`import_id`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT
+)
+ENGINE = InnoDB;
+
+ALTER TABLE `posting` ADD COLUMN `external_key` VARCHAR(255);
+
+ALTER TABLE `posting` ADD COLUMN `external_email` VARCHAR(255);
+
+ALTER TABLE `posting` ADD COLUMN `external_url` VARCHAR(512);
+
+ALTER TABLE `posting` ADD COLUMN `source_id` INT(32) AFTER `external_url`,
+ ADD CONSTRAINT `FK_posting_4` FOREIGN KEY `FK_posting_4` (`source_id`)
+    REFERENCES `source` (`source_id`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT;
+
+ALTER TABLE `image` ADD COLUMN `image_url` VARCHAR(255);

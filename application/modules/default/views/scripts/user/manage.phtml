@@ -1,0 +1,9 @@
+
+<?php
+ $reqStatus = array(
+            'status' => $this->requestStatus == "success"? "success" :'' ,
+             'user_type_id' => $this->user_type_id
+        );
+ echo json_encode($reqStatus);   
+?>
+

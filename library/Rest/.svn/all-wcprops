@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Exception.php
+END
+Controller.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Controller.php
+END
+ErrorHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/ErrorHandler.php
+END
+Resource.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Resource.php
+END

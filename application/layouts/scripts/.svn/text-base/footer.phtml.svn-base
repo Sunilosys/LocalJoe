@@ -1,0 +1,292 @@
+<div id='footer'>  
+    <div class="footer-inner">
+	<div class="fotcol" style="float:left">
+	     <div class="fotcol-pad" >
+		<h3>LEGAL MATTERS</h3>
+		<div class="textwidget">
+                    <div class="linkContainer"><a href="http://www.localjoe.com/blog/terms-of-service/">Terms of Service</a></div>
+                    <div class="linkContainer"><a href="http://www.localjoe.com/blog/privacy-policy/">Privacy Policy</a></div>
+                    <div class="linkContainer" style="border-bottom:0px"><a href="http://www.localjoe.com/blog/infringement-claims/">Copyright Infringement Claims</a></div>
+                    <div style="padding-top:100px"><a style="color:#ffffff" href="http://www.localjoe.com/blog">&copy; 2012 LocalJoe.com</a></div>
+			
+			
+			
+				
+		</div>
+	     </div>
+	</div><div class="fotcol">
+	     <div class="fotcol-pad">
+		<h3>LOCATIONS</h3>
+		<div class="textwidget">
+			
+			
+                          <div class="linkContainer"><a href="http://sf.localjoe.com">San Francisco Bay Area</a></div>
+                          <div class="linkContainer" style="border-bottom:0px"><a href="http://sg.localjoe.com">Singapore</a></div>
+		</div>
+	     </div>
+	</div><div class="fotcol" style="float:right">
+	     <div class="fotcol-pad">
+		<h3>FEEDBACK</h3>
+		<div class="textwidget">
+                     <div class="linkContainer"><a href="http://www.localjoe.com/blog/contact-us/">Contact Us</a></div>
+                     <div class="linkContainer"><a href="http://www.localjoe.com/blog/suggest-a-new-location/">Suggest a New Location</a></div>
+                     <div class="linkContainer"><a href="http://www.localjoe.com/blog/suggest-category/">Suggest a Category</a></div>
+                     <div class="linkContainer"><a href="http://www.localjoe.com/blog/submit-a-feature-request/">Request a Feature</a></div>
+                     <div class="linkContainer" style="border-bottom:0px"><a href="http://www.localjoe.com/blog/report-a-bug/">Report a Bug</a></div>
+			
+			
+			
+			
+			
+		</div>
+	     </div>
+	</div>
+    </div>
+</div>
+
+
+<div id="dialogSignUp" name="dialogSignUp" class='dialog' style='display: none;'>
+    <input type="hidden" id="sign-up-page"/>
+    <input id="spam_posting_id" value='' type="hidden"/>
+     <input id="flag_span_action" value='' type="hidden"/>
+    <div class="join-tab">  
+        <div class="header" id="register-header">
+            <h2>Join LocalJoe</h2>
+            Already a member? <a class="signin">Sign In!</a>
+        </div>
+        <div class="header" style="display:none;" id="register_only">
+            <h2>Join LocalJoe</h2>
+            Please register to continue.
+        </div>
+        <div class="content">
+            <form id="register_form">
+                <div class="fields">
+                    <div class='social-signin'>
+                        <a id="fb_button" class="button-facebook-large"></a>
+                        <a id="google_button" class="button-google-large"></a>
+                    </div>
+                    <input title="First Name" name="register_first_name" id="register_first_name" class="alphanumeric example"/>
+                    <input title="Last Name" name="register_last_name" id="register_last_name" class="alphanumeric example"/>
+                    <input title="Email" autocomplete="off" name="register_email" id="register_email" class="alphanumeric example"/>
+                    <div id="pwd-container-div" style="padding-top:5px;">
+                        <div style="float:left;"><input type="password" autocomplete="off" title="Password" name="register_pwd" id="register_pwd" class="alphanumeric example"/></div>
+                        <div><input type="password" autocomplete="off"  title="Retype" name="register_retype_pwd" id="register_retype_pwd" class="alphanumeric example"/></div>
+                    </div> 
+                </div>    
+                <div class='footer'>
+                    <span class="fine-print">
+                        By clicking Register, you agree to our <a href="http://www.localjoe.com/blog/terms-of-service/">Terms of Service</a>.
+                    </span>           
+                    <label class="error" style="vertical-align:100%" id="register_status"></label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="signin-tab">  
+        <div class="header" id="signin-header">
+            <h2>Sign In</h2>
+            Not a member yet? <a class="join">Join!</a>          
+        </div>
+        <div class="header" style="display:none;" id="sign_in_exists">
+            <h2>Sign In</h2>
+            Account exists. Please sign in.
+        </div>
+        <div class="content">
+            <form id="sign_in_form">
+                <div class="fields">
+                    <div class='social-signin'>
+
+                        <a id="fb_button" class="button-facebook-large"></a>
+                        <a id="google_button" class="button-google-large"></a>
+                    </div>
+                    <input title="Email" autocomplete="off" name="sign_in_email" id="sign_in_email" class="alphanumeric example"/>
+                    <input type="password" autocomplete="off" title="Password" name="sign_in_pwd" id="sign_in_pwd" class="alphanumeric example"/>
+                 <div  style="padding-top:10px;">
+                     <a id="resetPwd" class="reset-password">Reset your password</a>
+                 </div>
+                </div>
+                
+                <div class='footer' style="padding-top:0px;">
+                    <!--                <a class="check">Remember Me</a>-->              
+                    <label id="dialog_sign_in_error" style="vertical-align:100%" class="error"></label>
+                    <label id="dialog_sign_in_status" style="display:none"></label>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+         <div class="reset-password-tab" style="display:none">  
+        <div class="header" id="change-password-header">
+            <h2>Reset your password</h2>
+            Enter your e-mail address and click Submit.       
+        </div>
+       
+        <div class="content">
+            <form id="reset_password_form">
+                <div class="fields">
+                    
+                    <input title="Email" autocomplete="off" name="reset_pwd_email" id="reset_pwd_email" class="alphanumeric example"/>
+                      <label id="dialog_reset_pwd_msg"  name="dialog_reset_pwd_msg" style="vertical-align:100%;display:none;text-align:left;line-height: 20px">
+                             
+                      </label>
+                    
+                </div>
+                
+                <div style="padding-top:0px;">
+                              
+                    <label id="dialog_reset_pwd_error" style="display:none;vertical-align:100%;text-align:left" class="error"></label>
+                   
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="dialogSendResponse" class='dialog' style='display: none;'>   
+    <input type="hidden" id="send_response_default_subject"/>
+    <input type="hidden" id="send_response_posting_id"/>         
+        <div class="content" style="padding-bottom:0px">
+            <form id="send_response_form">
+                <div class="fields" style="padding-bottom:0px">                   
+                   
+                    <div style="clear:both;position:relative;width:580px;"><span><h4>Subject:</h4></span></div>    
+                    <input title="Subject" style="width:535px;margin-top:5px;margin-bottom:15px"  name="send_response_subject" id="send_response_subject" class="example"/>
+                     <div style="margin-bottom:5px"><span><h4>Message:</h4></span></div>
+                     
+                    <textarea id="send_response_body" class="mceEditor"  style="width:540px;" name="send_response_body">Please tell me more about this listing.</textarea>
+                     
+                    <div style="margin-top:15px"><span><h4>From:</h4></span></div>
+                        <div style="clear:both;position:relative;width:580px;margin-top:5px">
+                            <div style="width:185px;float:left;position:relative">
+                            <input title="Your Name" style="width:185px;" name="send_response_your_name" id="send_response_your_name" class="required alphanumeric example"/>
+                            </div>
+                          
+                            <div style="width:195px;right:180px;position:relative;float:right">
+                            <input title="Your Email Id" style="width:190px;" name="send_response_email_id" id="send_response_email_id" class="required email"/></div>
+                         <div style="float:right;width:120px;right:-150px;position:relative">
+                            <input title="Your Contact No" style="width:120px;" name="send_response_contact_no" id="send_response_contact_no" class="example alphanumeric"/>
+                            </div>
+                        </div>
+                    <div style="clear:both;position:relative;margin-top:25px;padding-left:230px">Would you like to send a SMS as well?   <input style="opacity:0" id="sendSMS" name='sendSMS' type='checkbox'></input></div>
+                <div style="clear:both;position:relative;margin-top:5px;padding-left:230px;display:none;height:20px" id="warningNoSMS"><span style="color:#888">SMS is not enabled by this poster.</span></div>
+             
+                </div>    
+                                          
+                    <label class="error" style="vertical-align:100%" id="send_response_status"></label>
+               
+            </form>
+        </div>
+    
+    
+</div>
+
+<div id="dialogShare" class='dialog' style='display: none;'>   
+    <div>    
+        <div class="header" id="social-share-header">
+            <h2>Share it</h2>          
+        </div>
+            
+        <div class="content" style="padding:5px;text-align:center">
+            <form id="share_form">               
+<!--                <ul class="actions share">
+                    <li><a  id="fblink_posting_id"  class="facebook"><img src="/images/icon-flag.png"/><span class="pophint">Share</span></a></li>                        
+                    <li><a class='twitter'></a>                                                  
+                        <span class='pophint'>Tweet</span></li>
+                    <li><a href="" class="email"><img src="/images/icon-twitter.png"/><span class="pophint">Email</span></a></li>
+                </ul> .actions  -->
+                <div class="fields">
+                    <div>
+
+                        <a id="fblink_posting_id" class="facebook">
+                            <span class="fb-share">Facebook Share</span>
+                        </a>
+                         <a id="twitter_posting_id" class="twitter">
+                            <span class="twitter-share">Twitter Share</span>
+                        </a>
+                         <a href="" id="email_posting_id" class="email">
+                            <span class="email-share">Email Friend</span>
+                        </a>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="dialogMap" class="dialog">
+    <div id="dialog_map_holder" style="height:500px;width:600px" name="dialog_map_holder" class="dialog-map"></div>
+</div>
+<!-- Page Dialogs -->
+<div id="dialogDeleteSavedSearch" class="dialog"><form id="delete_search_form">Are you sure you want to delete the selected saved search?<input type="hidden" id="searchToBeDeleted" value=""/></form></div>
+<div id="dialogDeleteShortlist" class="dialog"><form id="delete_shortlist_form">Are you sure you want to delete the selected shortlist?<input type="hidden" id="shortlistToBeDeleted" value=""/></form></div>
+
+<div id="dialogCategoryHelp" class="dialog"><p style="padding-top:10px">Please select a <b>specific category</b> for more search options!</p></div>
+<div id="dialogSaveSearch"  class="dialog">
+    <form id="saved_search_form">
+        <p>Please name your search.</p><input maxLength="255" style="width:225px" id="saved_search_name" class="alphanumeric" name="saved_search_name"/>
+        <label id="saved_search_error" class="error" style="display:none">Unexpected error occurred. Please try again</label>
+    </form>
+</div>
+<div id="dialogShortlist" name="dialogShortlist" class="dialog">
+    <form id="short_list_form">
+        <p>Please name your shortlist.</p>
+        <input id="short_list_name" class="alphanumeric" name="short_list_name" maxLength="255" style="width:225px"/>
+        <input id="short_list_posting_id" type="hidden"/>
+        <label id="short_list_error" class="error" style="display:none">Unexpected error occurred. Please try again</label>
+    </form>
+</div>
+<div id="dialogDeletePost" class="dialog">Are you sure you want to delete your post?<input value="" type="hidden" id="postToBeDeleted"/></div>
+<div id="dialogRepost" class="dialog">Your posting has been reposted. It will expire in 7 days.</div>
+<div id="dialogChangePassword" class="dialog">Your password has been changed successfully.</div>
+<div id="dialogSendActivation" class="dialog">Activation link has been sent to your email ID.</div>
+<div id="dialogActivationHelp" class="dialog"><p style="padding-top:10px">You have not yet activated your account. Please check your email and click on the activation link. <br/><br/>If you haven't received the activation email then click on 'Send Activation Link'!</p></div>
+<div id="dialogMarkerInfo" class="dialog"></div>
+<div id="dialogDetailsInfo" class="dialog"></div>
+<div id="dialogDeleteProfilePic" class="dialog">Are you sure you want to remove this picture?</div>
+
+<div id="dialogTakePic" class="dialog">
+ <div id="camera">
+	
+	<span class="camTop"></span>
+    
+    <div id="screen"></div>
+    <div id="buttons">
+    	<div class="buttonPane">
+        	<a id="shootButton" href="" class="blueButton">Capture</a>
+        </div>
+        <div class="buttonPane hidden">
+        	<a id="cancelButton" href="" class="blueButton">Cancel</a> <a id="uploadButton" href="" class="greenButton">Upload</a>
+        </div>
+    </div>
+    
+    <span class="settings"></span>
+</div>
+
+</div>
+
+
+<script src="/assets/fancybox/jquery.easing-1.3.pack.js"></script>
+<script src="/assets/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="/assets/webcam/webcam.js"></script>
+<script src="/assets/js/script.js"></script>
+
+
+<div id="ajax_spinner" style="display:none;position:absolute; top:60%; left:50%;z-index:3000">
+
+    <img  src="/images/loading.gif" width="40px" height="40px"/>
+</div>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31370378-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>

@@ -1,0 +1,32 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of GetPostOwner
+ *
+ * @author sunil_salunkhe
+ */
+class Application_Service_GetPostOwner {
+    public function execute($input) {
+        try {
+
+            $postObj = new Application_Model_LjPosting();          
+          
+            $where = "where p.posting_id = '" .$input. "'" ;
+            $postObj->sql_stmt = 'select ui.first_name,ui.last_name,ui.email,a.phone from user_info ui inner join posting p on ui.user_id = p.user_id inner join address a on a.posting_id=p.posting_id  ' . 
+                                    "$where" ;
+
+            $userInfo = $postObj->query();           
+            return $userInfo;
+        } 
+        catch (Exception $e) {
+
+            throw $e;
+        }
+ }
+}
+

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio
+END
+composer.json
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/composer.json
+END
+twilioSMS.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/1036/trunk/library/Twilio/twilioSMS.php
+END
+package.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/package.php
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/LICENSE
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/AUTHORS
+END
+CHANGES.md
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/CHANGES.md
+END
+travis_install.bash
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/travis_install.bash
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/README.md
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Makefile
+END

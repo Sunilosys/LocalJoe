@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/_themes
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/_themes/LICENSE
+END
+README.rst
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/_themes/README.rst
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/_themes/.gitignore
+END
+flask_theme_support.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/docs/_themes/flask_theme_support.py
+END

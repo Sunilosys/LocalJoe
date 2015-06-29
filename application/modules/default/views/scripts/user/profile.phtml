@@ -1,0 +1,477 @@
+<div class="account">
+
+ <div id="imagePickerProfile" class='dialog photobin'>
+  <div class='paginate' style='float: left;'>
+    <a class='selected' href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+  </div>      
+  <a href="#" style="margin-right: 5px; float: right;" class="button medium-large primary" id="photoUpload">Upload Photo</a>
+  <ul style='clear: both;'>
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check selected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+    <li><div class = 'image'></div><div class='caption'></div><span class='edit'><a class='check unselected' ></a></span></li> 
+  </ul>
+
+    <div class='paginate' style='float: left;'>
+      <a class='selected' href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+  </div>
+  </div>
+
+    <div class='box'>
+        <div id='breadcrumbs' class='header'>
+            <h2> 
+                <ul>
+                    <li><a href="#page=home"></a></li>
+                    <li><a href="#">My Account</a></li>     
+                </ul>
+            </h2>
+        </div><!-- Breadcrumbs -->	
+        <div class='content'>
+            <div id='leftnav'>
+               <div class="profile-pic-container" id="profile-pic-container"> 
+                    <ul id="profile_pic_edit" class="pophint menu"><li id="edit_photo_title" class="title"><?php if (isset($this->profile_pic_url)) { echo 'Edit Profile Picture';} else {echo 'Add Profile Picture';}?></li>
+<!--                        <li><a style="padding-left:5px" id="choose_from_photos" class="choose-profile-pic">Choose from photos...</a>
+                        </li>-->
+                          <li id="take_photo_li"><a style="padding-left:5px" id="take_photo" class="take-profile-pic">Take Photo...</a>
+                        </li>
+                         <li id="upload_photo_li">
+                             <form id="profilePicupload" name="profilePicupload" action="/upload/profilepic?_method=UPLOAD" method="POST"  enctype="multipart/form-data">
+                                   
+                             <a style="padding-left:5px" id="upload_photo" class="upload-profile-pic">Upload Photo...</a>
+                              <input type="file" id="profilePicInput" name="profilePicInput"   style="left: 100px;top: 65px;width: 50px;position:absolute"  class="file-input">
+                               </form>          
+                        </li>
+                         <li style="display:<?php if (isset($this->profile_pic_url)) { echo 'block';} else {echo 'none';}?>" id="edit_photo_li"><a style="padding-left:5px" id="edit_photo" class="edit-profile-pic">Edit Thumbnail...</a>
+                        </li>
+                         <li style="display:<?php if (isset($this->profile_pic_url)) { echo 'block';} else {echo 'none';}?>" id="remove_photo_li"><a style="padding-left:5px" id="remove_photo" class="remove-profile-pic">Remove...</a>
+                        </li>
+                    </ul>
+                   
+                      <img class="profile-pic" id="profile-pic" style="height:160px;width:160px"  src='<?php if (isset($this->profile_pic_url)) echo $this->profile_pic_url ; else echo '/images/noprofile.gif'; ?>'/>
+                                           
+                </div>
+               
+                <div class="profile-info" style='font-size: 14px;padding-bottom: 0px;padding-top:15px'>
+                    <div class='widget'>
+                        <div class="widget-header contact-info-header">
+
+                            <div style="float:left">
+                                <h2 class="title"><a id="profile_info_expand_collapse" title="Click to Expand/Collapse" class='collapse'><img class="small-icon" src="/images/arrow-circle-down.png"></img></a>Contact Info</h2>
+                            </div>
+<!--   <div style="float:right;padding-top:7px">
+                                <a class="edit" title="Edit Contact Info"><img src="/images/edit.png" style="height:14px;width:14px"></img></a>
+                                  </div>-->
+                        </div> 
+                        <div class='content contact-info-content' style="min-height:50px;padding-top:0px;margin-left:-20px">
+                           
+                            <div id="contact-info-container" name="contact-info-container">
+<!--                                <div style="float:clear;">
+                                    <h3 style="font-size:14px;width:55px;line-height:25px;color:rgb(102,102,102);" class="title">Name</h3>
+                                </div>
+                                <span  class="profile-name"><?php if (isset($this->userName)) echo $this->userName; ?></span>-->
+<div class="group">
+                                <div class="content email-content" style="float:clear;padding-top:7px;padding-bottom:5px;min-height:20px;width:210px;padding-left:-9px;padding-left:9px;margin-left:-9px">
+                                    <div style="float:left;width:190px">
+                                    <img src="/images/profile-email.png" title="Email" style="height:12px;width:12px;vertical-align: middle"></img> <span  class="profile-email"><?php if (isset($this->userEmail)) echo $this->userEmail; ?></span>
+                                    </div>
+                                     <?php if ($this->authentication_method_id == 0) { ?>
+                                       <div style="float:right;">
+                                <a class="edit" title="Edit Email"><img src="/images/edit.png" style="height:12px;width:12px"></img></a>
+                                  </div>
+                                   <?php } ?>
+                                    
+                                    </div>
+ <div class='edit-content' style="margin-bottom:0px;margin-left:-9px;padding-left:9px;width:205px"  id="emailEditContainer">
+                                <form id="email_form" name="email_form">
+
+
+                                    <input id="contact_user_email" name="contact_user_email" style="margin-left:15px" value='<?php if (isset($this->userEmail)) echo $this->userEmail; ?>'/>
+<label id="invalid_email" class="error" style="display: none;text-align:left;margin-left:15px">There is already an account associated with this email address.</label>
+                                             
+                                   
+
+                                    <div class='buttons' style='text-align: right;'>
+                                        <a class="cancel button secondary small">Cancel</a>
+                                        <a class="save button primary small">Save</a>
+                                    </div>
+                                </form>
+                            </div> 
+</div>
+
+<div class="group">
+                                <div class="content phone-content" style="float:clear;padding-top:7px;padding-bottom:5px;min-height:20px;width:210px;padding-left:-9px;padding-left:9px;margin-left:-9px">
+                                    <div style="float:left;width:175px">
+                                     <img src="/images/old_phone.png" title="Phone" style="height:12px;width:12px;vertical-align: middle"></img> <span  class="profile-phone"> <?php if (isset($this->phone) && strlen($this->phone) > 0) echo $this->phone; else echo ''; ?>
+</span>   </div>
+                                       <div style="float:right;">
+                                           <?php if (isset($this->phone) && strlen($this->phone) > 0) { ?>
+                                           <a class="remove" style="display:inline" title="Remove Phone"><img src="/images/trash.png" style="height:13px;width:13px"></img></a>
+                                           <?php }  else { ?>
+                                            <a class="remove" style="display:none" title="Remove Phone"><img src="/images/trash.png" style="height:13px;width:13px"></img></a>
+                                          <?php } ?>
+                                <a class="edit" title="Edit Phone"><img src="/images/edit.png" style="height:12px;width:12px"></img></a>
+                                  </div>
+                                   
+                                    
+                                    </div>
+ <div class='edit-content' style="margin-bottom:0px;margin-left:-9px;padding-left:9px;width:205px"  id="phoneEditContainer">
+                                <form id="phone_form" name="phone_form">
+
+
+                                    <input value="<?php if (isset($this->phone) && strlen($this->phone) > 0) echo $this->phone; ?>" id="contact_user_phone"  name="contact_user_phone" class="<?php if (isset($this->phone) && strlen($this->phone) > 0) echo 'phone'; else echo 'phone example'?>" style="width:145px;margin-left:15px" size=10 type='text' title="<?= $this->phoneformat; ?>"/>
+                                   
+
+                                    <div class='buttons' style='text-align: right;'>
+                                        <a class="cancel button secondary small">Cancel</a>
+                                        <a class="save button primary small">Save</a>
+                                    </div>
+                                </form>
+                            </div> 
+</div>
+
+<div class="group">
+                                <div class="content address-content" style="float:clear;padding-top:7px;padding-bottom:5px;min-height:30px;width:210px;padding-left:-9px;padding-left:9px;margin-left:-9px">
+                                    <div style="float:left;width:190px">
+                                       <img src="/images/address.png" title="Address" style="height:12px;width:12px;vertical-align: middle"></img> <span  class="profile-address"><?php if (isset($this->address)) echo $this->address; ?></span>
+                         </div>
+                                       <div style="float:right;">
+                                <a class="edit" title="Edit Address"><img src="/images/edit.png" style="height:12px;width:12px"></img></a>
+                                  </div>
+                                   
+                                    
+                                    </div>
+ <div class='edit-content' style="margin-bottom:0px;margin-left:-9px;padding-left:9px;width:205px"  id="addressEditContainer">
+                                <form id="address_form" name="address_form">
+
+
+                                  
+                                   <input id="contact_user_address" name="contact_user_address" value="<?php if (isset($this->address)) echo $this->address; ?>"  type='text' class='required'/>
+						<label id="invalid_location" class="error" style="display: none;">Please enter a valid address.</label>
+                                                   
+                                                <input id="zip_code" value="<?php if (isset($this->zip)) echo $this->zip; ?>" name="zip_code" type='hidden'/>
+                                                <input id="location_city" value="<?php if (isset($this->city)) echo $this->city; ?>" name="location_city" type='hidden'/>
+                                                <input type="hidden" value="<?php if (isset($this->lat)) echo $this->lat; ?>" id="location_lat" name="location_lat">
+                                                <input type="hidden" value="<?php if (isset($this->lon)) echo $this->lon; ?>" id="location_lon" name="location_lon">
+
+                                    <div class='buttons' style='text-align: right;'>
+                                        <a class="cancel button secondary small">Cancel</a>
+                                        <a class="save button primary small">Save</a>
+                                    </div>
+                                </form>
+                            </div> 
+</div>
+                               
+                               
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class='group widget'>
+                        <div class="widget-header">
+                                                <div style="float:left">
+                                                   <h2 class="title"><a id="manage_account_expand_collapse" title="Click to Expand/Collapse" class='collapse'><img class="small-icon" src="/images/arrow-circle-down.png" ></img></a>
+                                             Manage Account</h2>
+                                                </div>
+                                            </div> 
+                        <div class='content change-password-content' style="min-height:50px;padding-top:0px">
+                            <?php if ($this->authentication_method_id == 0) { ?>
+                                <div  style="padding-top:5px;padding-left:9px;padding-bottom:10px;margin-left: -30px;margin-top:0px;">
+                                    <a class='change-password'>Change Password</a>
+                                </div>
+                            <?php } ?>
+                            <?php if ($this->active_flag == 0) { ?>
+                                <div  style="padding-top:5px;padding-left:9px;padding-bottom:5px;margin-left: -30px">
+                                    <a class='send-activation-link'>Send Activation Link</a>
+                                </div>
+                            <?php } ?>
+                            <div class='edit-content' id="changePasswordContainer">
+                                <form id="change_password_form" name="change_password_form">
+                                    <input type="hidden"  id="user_id" name="user_id" value="<?php if (isset($this->userId)) echo $this->userId; ?>"></input>
+                                    <input type='password'  id="old_password" name="old_password" autocomplete="off" style='margin-top:10px;' title="Old Password"/>
+                                    <input type='password'  id="new_password" name="new_password" style='margin-top:10px;' title="New Password"/>
+                                    <input type='password'  id="retype_new_password" name="retype_new_password" style='margin-top:10px;' title="Retype New Password"/>
+                                    <div class='buttons' style='text-align: right;'>
+                                        <a class="cancel button secondary small">Cancel</a>
+                                        <a class="save button primary small">Save</a>
+                                    </div>
+                                </form>
+                            </div> 
+                            <div style="float:clear;margin-left:-30px;padding-bottom:5px;padding-top:5px;border-bottom:1px solid rgb(204, 204, 204);border-top:2px solid rgb(204, 204, 204)">
+                                <h3 style="font-size:14px;padding-left:9px;line-height:20px;color:rgb(102,102,102);" class="title">Default SMS Settings</h3>
+                            </div>
+                            <div  style="padding-top:0px;padding-bottom:0px;font-size:14px"><span style="padding-right:45px;">Enable SMS</span><input  id="enableSMS" <?php if (isset($this->enableSMS) && $this->enableSMS == 1) echo 'checked=checked' ?>  name='enableSMS'  type='checkbox'></input>
+                            </div>
+                            <div style="float:clear;margin-left:-30px;padding-bottom:5px;padding-top:5px;border-bottom:1px solid rgb(204, 204, 204);border-top:2px solid rgb(204, 204, 204)">
+                                <h3 style="font-size:14px;padding-left:9px;line-height:20px;color:rgb(102,102,102);" class="title">Default Privacy Settings</h3>
+                            </div>
+                            <div  style="padding-top:0px;padding-bottom:5px;font-size:14px"><span style="padding-right:35px;">Post Anonymously</span><input  id="postanon" <?php if (isset($this->postAnonymously) && $this->postAnonymously == 1) echo 'checked=checked' ?>  name='postanon'  type='checkbox'></input>
+                            </div>
+
+                        </div>
+                      
+                    </div>
+                   
+                </div> 
+                <div id='widget-savedsearches' class='widget savedsearches'>
+                    <?php if (isset($this->savedSearchHtml)) echo $this->savedSearchHtml; ?>
+                </div><!-- #widget-->
+                <div id='widget-shortlists' class='widget shortlists'>
+                    <?php if (isset($this->shortListHtml)) echo $this->shortListHtml; ?>
+                </div><!-- #widget-->
+            </div><!-- #leftnav-->
+
+            <div id='content' class="search">
+                <div id="welcomeMessage" style="display:none" class='instruction'>
+                    <?php if (isset($this->welcomeMessage)) echo $this->welcomeMessage; ?>
+                </div>
+                <div class="group myaccount-right-side">                
+<div style="float:clear;">
+    <span class="profile-title"><?php if (isset($this->userName)) echo $this->userName; ?></span>
+                                <a class="edit" title="Edit Name" ><img src="/images/edit.png" style="height:12px;width:12px"></img></a>
+                                  </div>
+                  <div class='edit-content' style="margin-bottom:0px;"  id="nameEditContainer">
+                                <form id="name_form" name="name_form">
+                                    <div style="float:clear;">
+                                        <h3 style="font-size:14px;width:100px;line-height:25px;color:rgb(102,102,102);" class="title">First Name</h3>
+                                    </div>
+                                    <input id="name_first_name" name="name_first_name" value='<?php if (isset($this->firstName)) echo $this->firstName; ?>'/>
+                                    <input type="hidden" id="hidden_first_name" name="hidden_first_name" value='<?php if (isset($this->firstName)) echo $this->firstName; ?>'/>
+                                
+ <div style="float:clear;">
+                                        <h3 style="font-size:14px;width:100px;line-height:25px;color:rgb(102,102,102);" class="title">Last Name</h3>
+                                    </div>
+                                    <input id="name_last_name" name="name_last_name" value='<?php if (isset($this->lastName)) echo $this->lastName; ?>'/>
+<input id="hidden_last_name" type="hidden" name="hidden_last_name" value='<?php if (isset($this->lastName)) echo $this->lastName; ?>'/>
+
+                                    
+
+                                    <div class='buttons' style='text-align: right;'>
+                                        <a class="cancel button secondary small">Cancel</a>
+                                        <a class="save button primary small">Save</a>
+                                    </div>
+                                </form>
+                            </div> 
+            </div>
+                <div>
+                    <div id='posttabs' style="display:none">
+                        <ul>
+                            <li><a  href='#tabs-1'>Timeline</a></li>
+                            <li><a  href='#tabs-2'>My Posts</a></li>
+                            <li><a id="photoLib" href='#tabs-3'>Photos</a></li>
+                            <li><a  href='#tabs-4'>Sent Items</a></li>
+                        </ul>
+                        <div id='tabs-1' style="width:auto;">
+
+                            <div id="mytimelineContent" class="items">
+                                <?php
+                                if (isset($this->postTabHtml) && $this->postTabHtml != "") {
+                                    echo $this->postTabHtml;
+                                } else {
+                                    ?> 
+                                    <a href="/#page=createpost"><div class="empty-user-post"></div></a>
+                                <?php } ?>
+                            </div>
+                            <div id="last_post_loader_timeline">&nbsp;</div>
+                        </div>
+                        <div id='tabs-4' style="width:auto">
+
+                            <div id="mysentItemsContent" class="items">
+                                <?php
+                                if (isset($this->postTabHtml) && $this->postTabHtml != "") {
+                                    echo $this->postTabHtml;
+                                } else {
+                                    ?> 
+                                    <a href="/#page=createpost"><div class="empty-user-post"></div></a>
+                                <?php } ?>
+                            </div>
+                            <div id="last_post_loader_sentItems">&nbsp;</div>
+                        </div>
+
+                        <div id='tabs-2' style="width:auto;display:none">
+                            <div>
+                                <div style='font-size: 15px;color: #555; padding:5px;padding-left:0px;padding-bottom:0px;width:700px;height:25px'>
+                                    
+                                    <span class="showActive" style="position:absolute;left:270px;top:36px"> 
+                                        <span>Active</span> 
+                                        <input style="opacity:0" id="showActivePosts" checked="checked" name='showActivePosts'  type='checkbox'></input>
+                                    </span>  
+                                    <span class="showExpired" style="position:absolute;left:390px;top:36px"> 
+                                        <span>Expired</span> 
+                                        <input style="opacity:0" id="showExpiredPosts"  name='showExpiredPosts'  type='checkbox'></input>
+                                    </span> 
+                                    <span class="showDeleted" style="position:absolute;left:520px;top:36px"> 
+                                                                                   <span>Deleted</span> 
+                                                                                   <input style="opacity:0" id="showDeletedPosts"  name='showDeletedPosts'  type='checkbox'></input>
+                                                                               </span> 
+                                    </div>
+                                </div>
+                                <div id="mypostsContent" class="items">
+                                    <?php
+                                    if (isset($this->postTabHtml) && $this->postTabHtml != "") {
+                                        echo $this->postTabHtml;
+                                    } else {
+                                        ?> 
+                                        <a href="/#page=createpost"><div class="empty-user-post"></div></a>
+                                    <?php } ?>
+                                </div>
+                                <div id="last_post_loader">&nbsp;</div>
+                            </div>
+
+                            <div id='tabs-3' class='photobin' style="width:auto;">
+
+                                    <form id="fileupload" action="/upload/index/" method="POST" enctype="multipart/form-data">
+                                        <div id="emptyinstr" style="display:none" name="emptyinstr" class='instruction'>
+                                            <?php echo $this->translate->_('post.photos.emptyinstruction'); ?> 
+                                        </div>
+                                        <div id="instr" name="instr" style="display:none" class='instruction'>
+                                            <?php echo $this->translate->_('post.photos.emptyinstruction'); ?> 
+                                        </div>
+                                        <div class="fileupload-buttonbar">
+                                            <a id='photoUpload' class = 'button medium-large primary' href="#">Upload Photos</a>
+                                            <input type="file" id="fileInput" name="files[]" multiple="multiple" class="file-input">
+                                            <!-- The global progress bar -->
+
+                                            <div class="progress progress-success progress-striped active fade">
+                                                <div class="bar" style="width:0%;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- The loading indicator is shown during image processing -->
+                                        <div class="fileupload-loading"></div>
+                                    </form>
+
+                                    <ul id="uploadFileListing"></ul>
+                                    <div id="photo_loader" style="width:580px">&nbsp;</div>
+                                    <!-- The template to display files available for upload -->
+                                    <script id="template-upload" type="text/x-tmpl">
+                                        {% for (var i=0, file; file=o.files[i]; i++) { %}
+                                        <li class="template-upload fade" li>
+                                            <div class="image">
+                                                <div class="preview"><span class="fade"></span></div>                    
+                                                <span class="cancel pophint-delete">{% if (!i) { %}
+                                                    <a id='cancelUpload' class = 'delete'></a>
+                                                    {% } %}</span>
+                                            </div>
+                                            <div class="name caption">{%=file.name%}</div>
+                                            <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                                            {% if (file.error) { %}
+                                            <span class="error"><span class="label label-important">Oops!</span> Could not upload please try again.</td>
+                                                {% } else if (o.files.valid && !i) { %}
+                                                <span>
+                                                    <span class="progress progress-success progress-striped active"><div class="bar" style="width:0%;"></div></div>
+                                                    </span>
+                                                    <span class="start">{% if (!o.options.autoUpload) { %}
+                                                        <button class="btn btn-primary">
+                                                            <i class="icon-upload icon-white"></i> {%=locale.fileupload.start%}
+                                                        </button>
+                                                        {% } %}</span>
+                                                    {% } else { %}
+                                                    <span></span>
+                                                    {% } %}
+
+                                                    </li>
+                                                    {% } %}
+                                                    </script>
+                                                    <!-- The template to display files available for download -->
+                                                    <script id="template-download" type="text/x-tmpl">
+                                                        {% for (var i=0, file; file=o.files[i]; i++) { %}
+                                                        <li class="{%=file.checkClass%} template-download fade" title="{%=file.name%}">
+                                                            {% if (file.error) { %}
+                                                            <div class="image"> <span class="label label-important">Oops!</span> Could not upload please try again.</div>
+                                                    <div class="caption">{%=file.name%}</div>
+                                                    {% } else { %}
+<!--                                                    <span class="profile-photo">Profile Photo</span>-->
+                                                    <div class="image" ondblclick="return launchEditor(this, '{%=file.url%}');">{% if (file.thumbnail_url) { %}
+                                                        <img id="image1"  src='{%=file.thumbnail_url%}'/>
+                                                        <span class="pophint-delete" ondblclick="return 0;"><a class="delete" href="#" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"></a></span>
+                                                        <ul class="pophint menu">    
+                                                           
+                                                            <li><a class="menu-edit">Edit</a></li>                                                           
+                                                            <li><a class="menu-delete">Delete</a></li>
+                                                        </ul>                                   
+                                                    </div>
+                                                    {% } %}
+                                                    <div class="caption">
+                                                        <textarea></textarea>
+                                                        <span>{%=file.caption%}</span>
+                                                    </div>                     
+<!--                                                    <span class="edit-select"><a class="check {%=file.checkClass%}"/></span>-->
+                                                    <input class="file-size" type="hidden" value="{%=file.size%}">
+                                                    <input class="file-name" type="hidden" value="{%=file.name%}">
+                                                    <input class="image-id" type="hidden" value="{%=file.image_id%}">
+                                                    <input class="org-image-width" type="hidden" value="{%=file.org_img_width%}">
+                                                    <input class="org-image-height" type="hidden" value="{%=file.org_img_height%}">
+                                                    <input class="image-type-width" type="hidden" value="{%=file.image_type_width%}">
+                                                    <input class="image-type-height" type="hidden" value="{%=file.image_type_height%}">
+                                                    <input class="image-type-size" type="hidden" value="{%=file.image_type_size%}">
+                                                    {% } %}                      
+                                                </li>
+                                                {% } %}
+                                                </script>
+                                                <?php
+                                                $script1 = $this->minifyInlineScript() // Whatever was already loaded from Controller.                                                        							
+                                                        ->prependFile('/js/main.js')
+                                                        ->prependFile('/js/locale.js')
+                                                        ->prependFile('/js/jquery.fileupload-ui.js')
+                                                        ->prependFile('/js/jquery.fileupload-ip.js')
+                                                        ->prependFile('/js/jquery.fileupload.js')
+                                                        ->prependFile('/js/jquery.iframe-transport.js')
+                                                        ->prependFile('/js/canvas-to-blob.min.js')
+                                                        ->prependFile('/js/load-image.min.js')
+                                                        ->prependFile('/js/tmpl.min.js');
+
+                                                echo $script1;
+                                                ?>
+
+                                                </div> 
+
+                                                </div>
+                                                </div>
+                                                </div> <!-- #Content-->
+                                                </div> <!-- .content -->
+                                                <br style='clear:both;'>
+                                                </div> <!-- .box -->
+                                                <input type="hidden" id="startRowIndexAllPosts" name="startRowIndexAllPosts" value='0'></input>
+                                                <input type="hidden" id="startRowIndexActivePosts" name="startRowIndexActivePosts" value='<?php if (isset($this->start)) echo $this->start; else echo '0' ?>'></input>
+                                                <input type="hidden" id="startRowIndexActivePosts" name="startRowIndexPostResponses" value='0'></input>
+                                                <input type="hidden" id="startRowIndexAllActivities" name="startRowIndexAllActivities" value='0'></input>
+                                                <input type="hidden" id="noOfRows" name="noOfRows" value='<?php if (isset($this->rows)) echo $this->rows; else echo '10' ?>'></input>
+                                                <input type="hidden" id="prevcallstatus" name="getPostsstatus" value='0'></input>
+                                                <input type="hidden" id="numFound" name="numFound" value='<?php if (isset($this->numFound)) echo $this->numFound; else echo '10' ?>'></input>
+                                                </div><!-- #main --> 
+
+                                                <script language="JavaScript" type="text/javascript" src='/js/feather.js'></script>
+                                                <script language="JavaScript" type="text/javascript" src='/js/aviary.js'></script>
+                                                <script language="JavaScript" type="text/javascript" src='/js/profile.js'></script>
+                                                 <script language="JavaScript" type="text/javascript" src='/js/google-autocomplete.js'></script>
+                                                <script language="JavaScript" type="text/javascript" src='/js/jquery.form.js'></script>
+                                                 <script>
+                                                    $('document').ready(function(){
+                                                        var active_flag = "<?php echo $this->active_flag ?>";
+                                                  
+                                                        if (active_flag == 0)
+                                                        {
+                                                            $("#dialogActivationHelp").dialog("open");
+                                                            $( "#dialogActivationHelp" ).dialog('widget').position({
+                                                                my:"left top",
+                                                                at:"right top",
+                                                                of: '.send-activation-link',
+                                                                offset: "15 -20"
+                                                            });
+                                                            setTimeout(function(){$("#dialogActivationHelp").dialog("close")},7000);
+                                                        }
+                                                    
+                                                    });
+                                                </script>

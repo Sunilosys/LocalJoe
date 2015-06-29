@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/LocalJoe/!svn/ver/959/trunk/DB/Tables
+END
+localjoe - settings.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LocalJoe/!svn/ver/344/trunk/DB/Tables/localjoe%20-%20settings.sql
+END
+localjoe - index.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/172/trunk/DB/Tables/localjoe%20-%20index.sql
+END
+localjoe - login.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/82/trunk/DB/Tables/localjoe%20-%20login.sql
+END
+localjoe - partition.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/840/trunk/DB/Tables/localjoe%20-%20partition.sql
+END
+localjoe-import.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/959/trunk/DB/Tables/localjoe-import.sql
+END

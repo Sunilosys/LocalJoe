@@ -1,0 +1,74 @@
+<div id='main-menu' class='menu'>
+    <ul>
+        <li><a id="menu-home" class="menu-item" href="#page=home">Home</a> </li>       
+        <li><a id='menu-category' class='menu-item drop'>Categories</a><div id='category-finder' class='finder' style="left:-6px"><div>
+
+                    <div class='categories-list'>
+                      <div class='column'><ul>
+                                <?php
+                                //$numPerCol = ceil((count($this->parentCategoryInfo) + count($this->categoryInfo)) / 6);
+                                $i = 0;
+                                foreach ($this->parentCategoryInfo as $key => $val) {
+                                     if ($i != 0)
+                                     echo "</ul></div><div class='column'><ul>";   
+                                    ?>                                 
+
+                                    <li>
+                                        <img class="category-icon" src="/images/category/<?php echo $val->getParent_category_id() ?>-icon.png"></img>
+                                        <h3><b><a href="#page=search" id='parentcategory_<?php echo $val->getParent_category_id() ?>' name='parentcategory_<?php echo $val->getParent_category_id() ?>'><?php echo $val->getParentCategoryName() ?></a></b></h3></li>
+                                    <?php
+                                    $i++;
+//                                    if ($i > $numPerCol) {
+//                                        echo "</ul></div><div class='column'><ul>";
+//                                        $i = 0;
+//                                    }
+                                    foreach ($this->categoryInfo as $key2 => $val2) {
+                                        ?>
+                                        <?php if ($val->getParent_category_id() == $val2->getParent_category_id()) { ?>
+                                           <li><h4><a href="#page=search" id='category_<?php echo $val->getParent_category_id() . '_' ?><?php echo $val2->getCategory_id() ?>' name='category_<?php echo $val2->getCategory_id() ?>' ><?php echo $this->translate->_($val2->getCategoryName()) ?></a></h4></li>
+                                            <?php 
+                                           // $i++;
+                                           // if ($i > $numPerCol) {
+                                            //    echo "</ul></div><div class='column'><ul>";
+                                            //    $i = 0;
+                                            //}
+                                        }
+                                        ?>
+                                    <?php } ?>                   
+                                <?php } ?>
+                            </ul></div>   
+
+                    </div><!--categories-list-->
+
+
+                </div></div></li>
+	<li><a id="menu-create" class="menu-item" href="#page=createpost">Create a Post</a></li>
+        <li class='myaccount menu-item'><?php if ($this->userLoggedIn) { ?><a href="#page=profile" class="menu-item" id="topnav_my_account" name="topnav_myaccount">My Account</a><?php } else { ?><a href='#page=profile' class="menu-item" id="topnav_my_account" name="topnav_myaccount" style="display:none;">My Account</a><?php } ?></li>
+       <li class='admin menu-item'><?php if ($this->user_type_id == 1) { ?><a href="#page=admin" class="menu-item" id="topnav_admin" name="topnav_admin">Administration</a><?php } else { ?><a href='#page=admin' class="menu-item" id="topnav_admin" name="topnav_admin" style="display:none;">Administration</a><?php } ?></li>
+    </ul>
+    <ul style="float:right">
+        <li>
+            <?php if ($this->userLoggedIn) { ?>
+            <a  id="topnav_sign_up" class="menu-item" name="topnav_sign_up" style="display:none;">&nbsp;</a>
+            <?php } else { ?>
+                <a  id="topnav_sign_up" class="menu-item" name="topnav_sign_up" style="display:block;">&nbsp;</a>
+                <?php } ?>
+    </li>
+    <li>
+        <?php if ($this->userLoggedIn) { ?>
+     <span id="topnav_or" class="menu-item" name="topnav_or" style="display:none;">or</span>
+      <?php } else { ?>
+     <span id="topnav_or" class="menu-item" name="topnav_or" style="display:block;">or</span>
+      <?php } ?>
+    </li>
+    <li>
+         <?php if ($this->userLoggedIn) { ?>
+            <a  id="topnav_sign_in" class="menu-item" name="topnav_sign_in" style="display:none;">&nbsp;</a>
+            <?php } else { ?>
+                <a  id="topnav_sign_in" class="menu-item" name="topnav_sign_in" style="display:block;">&nbsp;</a>
+                <?php } ?>
+                    </li>
+                     <li class='top-nav-sign-out' style="display:<?php if ($this->userLoggedIn) { echo 'block';} else {echo 'none';}?>"><a id="topnav_sign_out" class="menu-item" name="topnav_sign_out" src="/iamges/sign_out.png">&nbsp;</a></li>
+
+    </ul>
+</div> <!-- Menu -->

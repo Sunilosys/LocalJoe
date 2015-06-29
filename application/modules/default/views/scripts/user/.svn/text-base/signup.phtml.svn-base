@@ -1,0 +1,60 @@
+ 
+<div class="signup">
+    <div class='box facebook col col12'>
+        <div class='content'>
+            <a class='button-google' id="google_button" style='right: -16px; vertical-align: bottom;margin-right:15px'></a>
+            <a  class='button-facebook' id="fb_button" style="margin-right:15px"></a><a>Click here</a> to learn about the benefits!
+            <label id="fb_google_login_status" class="error"></label>
+        </div>
+    </div>
+
+    <div class='box sign-up col col6'>
+        <div class='header'><h2>Sign up for a LocalJoe account, its free!</h2></div>
+
+        <div class='content'>
+            <form id="register_form">
+                <div>
+
+                    <input id="register_first_name" name="register_first_name" title="First Name"/>
+
+                    <input id="register_last_name" name="register_last_name" title="Last Name"/>
+
+                    <input id="register_email" name="register_email" title="Email"/>
+
+                    <input id="register_pwd" name="register_pwd" type="password" title="Password"/>
+
+                    <input id="register_retype_pwd" type="password" name="register_retype_pwd" title="Retype Password"/>
+                </div>
+                <span class='fine-print'>
+                    By clicking Register, you agree to our <a>Terms and Conditions</a> and agree that you will abide by our <a>User Agreement</a>.
+                </span>
+                <a class='button primary' id="register_link" href="#">Register</a>
+                <label id="register_status" style="vertical-align:100%" class="error"></label>
+            </form>
+        </div>
+    </div> 
+
+    <div class='box sign-in col col6'>
+        <div class='header'><h2>I already have a LocalJoe account</h2></div>
+        <div class='content'>
+
+            <form id="sign_in_form">
+                <div>
+                    <input id="sign_in_email" name="sign_in_email" title="Email" class="required"/>
+
+                    <input id="sign_in_pwd" name="sign_in_pwd" title="Password" type="password" class="required" />
+                    <a class='check'>Remember Me</a>
+
+                    <a id="sign_in_link" class='button primary' href="#">Sign In</a>
+                    <label id="sign_in_status_sign_up" style="vertical-align:100%" class="error"></label>
+            </form>
+
+        </div><!-- .content-->
+    </div> 
+    <input type="hidden" id="sso_url" value='<?php echo $this->sso_url; ?>' name="sso_url" />
+    <br style='clear: both;'>
+
+</div>
+
+
+

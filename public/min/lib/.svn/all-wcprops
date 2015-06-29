@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib
+END
+Minify.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/Minify.php
+END
+FirePHP.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/FirePHP.php
+END
+JSMin.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/JSMin.php
+END
+JSMinPlus.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/lib/JSMinPlus.php
+END

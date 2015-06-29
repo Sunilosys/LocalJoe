@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/LocalJoe/!svn/ver/389/trunk/public/min
+END
+utils.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/utils.php
+END
+config.php.bak
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/config.php.bak
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/.htaccess
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/config.php
+END
+groupsConfig.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/groupsConfig.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LocalJoe/!svn/ver/389/trunk/public/min/index.php
+END

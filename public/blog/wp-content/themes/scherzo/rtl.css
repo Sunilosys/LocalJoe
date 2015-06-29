@@ -1,0 +1,23 @@
+body {  
+    direction: rtl;  
+    unicode-bidi: embed;  
+} 
+
+@media screen and (min-width: 850px) {
+
+	#content {
+		clear: both;
+		width: 32.625em;
+		padding-right: 0.375em;
+		float: right;
+		margin-left: 3em;
+		display: inline;
+	}
+
+	#sidebar {
+		float: right;
+		width: 18em;
+		padding-left: 0.462em;
+	}
+
+}

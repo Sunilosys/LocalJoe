@@ -1,0 +1,49 @@
+
+var featherEditor = new Aviary.Feather({
+    apiKey: 'f15d97495',
+    apiVersion: 2,
+    tools: 'enhance,effects,orientation,crop,brightness,contrast,saturation,sharpness',
+    appendTo: '',   
+    onSave: function(imageID, newURL) {
+        var img = $("#" + imageID);
+        var fileName = $(img).parents('.template-download').find('.file-name').val();
+        var imageId = $(img).parents('.template-download').find('.image-id').val();        
+        $.ajax({
+            type: 'POST',
+            url: "/upload/index/",
+            data: "_method=SAVE&imageId=" + imageId + "&fileName=" + fileName + "&oldImage=" + img.attr('src') + "&newImage=" + newURL,
+            success: function(data){     
+                reloadImg($(img).attr('id')) ;  
+                
+            }  
+        }); 
+        
+    },
+    onClose: function(){
+        $('#avpw_holder').hide();
+    }
+});
+function reloadImg(id) {
+    var obj = document.getElementById(id);
+    var src = obj.src;
+    var pos = src.indexOf('?');
+    if (pos >= 0) {
+        src = src.substr(0, pos);
+    }
+    var date = new Date();
+    obj.src = src + '?v=' + date.getTime();
+    return false;
+}
+
+function launchEditor(obj, src) {
+    $('#avpw_holder').show();
+    var id = $(obj).find('img').first().attr('id');
+       
+    featherEditor.launch({
+        image: id,
+        url: src
+          
+    });
+				
+    return false;
+}

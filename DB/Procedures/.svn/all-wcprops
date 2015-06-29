@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/LocalJoe/!svn/ver/968/trunk/DB/Procedures
+END
+spIndexPostings.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/968/trunk/DB/Procedures/spIndexPostings.sql
+END
+spCLIndexPostingAttribute.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/LocalJoe/!svn/ver/961/trunk/DB/Procedures/spCLIndexPostingAttribute.sql
+END
+spRegenerateSearchTable.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/LocalJoe/!svn/ver/684/trunk/DB/Procedures/spRegenerateSearchTable.sql
+END
+spGetCheckboxList.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/440/trunk/DB/Procedures/spGetCheckboxList.sql
+END
+spDeletePosting.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/681/trunk/DB/Procedures/spDeletePosting.sql
+END
+spGetTagList.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/LocalJoe/!svn/ver/440/trunk/DB/Procedures/spGetTagList.sql
+END
+spGenerateSearchData.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/968/trunk/DB/Procedures/spGenerateSearchData.sql
+END
+spCLIndexPosting.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/LocalJoe/!svn/ver/968/trunk/DB/Procedures/spCLIndexPosting.sql
+END
+spIndexPostingsAsync.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/440/trunk/DB/Procedures/spIndexPostingsAsync.sql
+END
+spCLIndexPostings.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/968/trunk/DB/Procedures/spCLIndexPostings.sql
+END

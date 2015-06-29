@@ -1,0 +1,88 @@
+[development]
+db.adapter = PDO_MYSQL
+db.params.host = 192.168.100.97
+db.params.username = root
+db.params.password = adminpw4mysql
+db.params.dbname = lj_partition_3
+dateformat = 'dd/mm/yy'
+datetimeformat = 'F j, Y, g:i a'
+phoneformat = 'xxxx xxxx'
+country=sg
+latitude=1.2894365
+longitude=103.8499802
+timezone='Asia/Singapore'
+partition='Singapore'
+blog_url = 'http://www.localjoe.com/blog'
+facebook_app_id = '301183859931337'
+website_url = 'http://sf.localjoe.com/'
+
+[production]
+db.adapter = PDO_MYSQL
+db.params.host = 192.168.100.97
+db.params.username = root
+db.params.password = adminpw4mysql
+db.params.dbname = lj_partition_3
+dateformat = 'dd-mm-yyyy'
+datetimeformat = 'F j, Y, g:i a'
+phoneformat = 'xxxx xxxx'
+country=sg
+latitude=1.2894365
+longitude=103.8499802
+timezone='Asia/Singapore'
+partition='Singapore'
+blog_url = 'http://www.localjoe.com/blog'
+facebook_app_id = '301183859931337'
+website_url = 'http://sf.localjoe.com/'
+[posting]
+expireafter = +7 days
+post_desc_truncate_limit = 220
+post_share_url = http://sg.localjoe.com/api/post/
+homePageNoOfItems = 10
+[email]
+format = html
+fromEmail = donotreply@ebusinessdesign.com
+fromName = LocalJoe Support Team
+smtpServer =mail.ebusinessdesign.com
+smtpUser = ssalunkhe@ebusinessdesign.com
+smtpPwd = sunil907
+subject =Welcome to Local Joe. Please activate your account
+website =localjoe
+activationUrl = http://localhost:8080/
+
+[imageupload]
+store = localhost
+image_store_path = C:/xampp/htdocs/LocalJoe/public 
+image_store_url = http://localhost:8080/
+image_upload_dir = uploads
+original_image_dir = original
+thumbnails_image_dir = thumbnails
+
+[sso]
+sso_url = http://fem.ebusinessdesign.com
+
+[solr]
+solr_host = 192.168.100.30
+solr_port = 8080
+solr_root = /solr/ny/
+rows = 20
+start = 0
+facet = true
+wt = json
+contentType = 'application/json;charset=utf-8'
+dataType = jsonp
+jsonp = json.wrf
+visible_item_count_left_nav = 5
+facet_mincount = 0
+
+[amazon]
+accessKey=AKIAIC2B3CZUNDD6DPMQ
+secretKey=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
+ownerId=338624021210
+original_image_name_format = "ljimages/USER_ID/original/IMAGE_ID";
+thumbnail_image_name_format = "ljimages/USER_ID/thumbnail/IMAGE_ID";
+lj_bucket_name = "ljimages";
+amazon_S3_url = "http://s3.amazonaws.com";
+
+[import-data]
+location_code = SFO
+status = Not Processed

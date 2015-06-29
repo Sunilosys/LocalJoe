@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Content
+END
+Negotiator.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Content/Negotiator.php
+END
+NegotiatingController.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Content/NegotiatingController.php
+END
+Registry.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Content/Registry.php
+END

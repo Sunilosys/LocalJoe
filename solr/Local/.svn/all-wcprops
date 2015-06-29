@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/LocalJoe/!svn/ver/692/trunk/solr/Local
+END
+schema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/LocalJoe/!svn/ver/692/trunk/solr/Local/schema.xml
+END
+solrconfig.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/LocalJoe/!svn/ver/692/trunk/solr/Local/solrconfig.xml
+END
+data-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/692/trunk/solr/Local/data-config.xml
+END

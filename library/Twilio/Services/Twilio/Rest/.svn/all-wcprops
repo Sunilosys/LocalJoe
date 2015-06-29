@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest
+END
+IncomingPhoneNumbers.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/IncomingPhoneNumbers.php
+END
+AuthorizedConnectApp.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/AuthorizedConnectApp.php
+END
+SmsMessages.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/SmsMessages.php
+END
+Account.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Account.php
+END
+Sandbox.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Sandbox.php
+END
+Calls.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Calls.php
+END
+Transcription.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Transcription.php
+END
+Participants.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Participants.php
+END
+Queues.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Queues.php
+END
+SmsMessage.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/SmsMessage.php
+END
+Call.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Call.php
+END
+Recording.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Recording.php
+END
+OutgoingCallerIds.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/OutgoingCallerIds.php
+END
+Accounts.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Accounts.php
+END
+Notification.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Notification.php
+END
+Applications.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Applications.php
+END
+ShortCode.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/ShortCode.php
+END
+Members.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Members.php
+END
+Conferences.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Conferences.php
+END
+ConnectApp.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/ConnectApp.php
+END
+OutgoingCallerId.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/OutgoingCallerId.php
+END
+Recordings.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Recordings.php
+END
+Application.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Application.php
+END
+AvailablePhoneNumbers.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/AvailablePhoneNumbers.php
+END
+IncomingPhoneNumber.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/IncomingPhoneNumber.php
+END
+Member.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Member.php
+END
+Conference.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Conference.php
+END
+Notifications.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Notifications.php
+END
+AuthorizedConnectApps.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/AuthorizedConnectApps.php
+END
+ShortCodes.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/ShortCodes.php
+END
+ConnectApps.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/ConnectApps.php
+END
+Participant.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Participant.php
+END
+Transcriptions.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Transcriptions.php
+END
+AvailablePhoneNumber.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/AvailablePhoneNumber.php
+END
+Queue.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/LocalJoe/!svn/ver/994/trunk/library/Twilio/Services/Twilio/Rest/Queue.php
+END

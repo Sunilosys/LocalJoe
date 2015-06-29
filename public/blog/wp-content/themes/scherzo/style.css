@@ -1,0 +1,1055 @@
+/*
+Theme Name: Scherzo
+Theme URI: http://leonpaternoster.com/wp-themes/
+Description: A clean, readable theme. Boasts a responsive, mobile first design which means it displays perfectly on all devices, including mobile phones (not just iPhones), tablets and desktops.
+Version: 2.42
+Author: Leon Paternoster
+Author URI: http://leonpaternoster.com
+Tags: white, two-columns, flexible-width, custom-background, threaded-comments, microformats, rtl-language-support, custom-header, post-formats
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/* CONTENTS
+
+1.		RESET AND HTML5 SETTINGS
+2.		BASE SETTINGS (HTML, BODY AND WRAPPER)
+3.		REUSABLE AND UNIVERSAL (LINKS, FORMS, IMAGE LINKS ETC.)
+4.		SITE HEADER
+5.		ARTICLES AND PAGES
+			5.1		Home page styles
+			5.2		Single styles
+			5.3		Page styles
+			5.4		Archive and search styles
+			5.5		Article header
+			5.6		Article content headings
+			5.7		Article content elements
+			5.8		Article content images
+			5.9		Article content tables
+			5.10		Article footer
+			5.11		Comments
+6.		ASIDES
+			6.1		Specific widget styles
+7.		FOOTER
+8.		PRINT STYLES (using @MEDIA)
+9.		WIDE SCREEN STYLES (using @MEDIA)
+
+*/
+
+@media screen, projection {
+
+
+/* 1. RESET AND HTML5 SETTINGS 
+------------------------------*/ 
+
+body,
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+fieldset,
+dd,
+figure,
+figcaption {
+	margin:  0;
+	padding: 0;
+}
+
+article,
+aside,
+dialog,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+
+/* 2. BASE SETTINGS (HTML, BODY AND WRAPPER)
+--------------------------------------------*/
+
+html {
+	background-color: #FFF;
+	color: #444;
+}
+
+body {
+	font-size: 100%;
+	line-height: 1.5;
+	font-family: georgia, 'liberation serif', palatino, serif;
+	border-top: 0.25em solid #444;
+}
+
+#wrapper {
+	margin: 0 auto;
+	background-image: none;
+	background-color: #FFF;
+	padding: 1.5em 1em;
+	max-width: 51em;
+	_width: 51em; /* For IE's awesome CSS rendering */
+}
+	
+
+/* 3. UNIVERSAL AND REUSABLE
+----------------------------*/
+
+#quick-links {
+	display: none;
+}
+
+.accessibility {
+	display: none;
+}
+
+#site-footer {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #336699;
+}
+
+a:visited {
+	color: #77A3CE;
+}
+
+a:hover,
+a:active {
+	color: #FC0599;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+.imglink,
+.wp-caption a {
+	border: none !important;
+	text-decoration: none;
+	color: #FFF;
+}
+
+p,
+ul,
+ol,
+dd {
+	margin-bottom: 0.75em;
+}
+
+blockquote {
+	padding: 1.5em;
+	margin: 0;
+	color: #888;
+	font-size: 15px;
+}
+
+code {
+	font-family: consolas, 'andale mono', 'courier new', monospace;
+	font-size: 1em;
+}
+
+legend {
+	border: none;
+}
+
+.hentry {
+	padding-bottom: 1.5em;
+}
+
+.pagination {
+	clear: both;
+	padding-bottom: 0.75em;
+}
+
+.pagination p {
+	margin-bottom: 0;
+}
+
+
+/* 4. SITE HEADER
+-----------------*/
+
+#site-header {
+	margin-bottom: 1.5em;
+	padding: 0 0.375em;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+a.header-link {
+	display: block;
+	border: none !important;
+}
+
+#site-title {
+	font-size: 1em;
+	font-weight: bold;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	padding-top: 0;
+	line-height: 1;
+}
+
+#site-title a:link,
+#site-title a:visited {
+	color: #444;
+}
+
+#site-title a:hover,
+#site-title a:active {
+	color: #444;
+}
+
+#tag {
+	font-size: 0.833em;
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+/* 5. ARTICLES AND PAGES
+------------------------*/
+
+#content {
+	padding-left: 0.375em;
+}
+
+
+/* 5.1 Home page styles
+-----------------------*/
+
+.sticky {
+	font-family: inherit;
+}
+
+.home .format-aside img,
+.home .format-aside p,
+.home .format-aside .wp-caption {
+	padding: 0;
+	margin: 0;
+}
+
+/* 5.2 Single styles
+--------------------*/
+
+.single .entry-summary p {
+	font-weight: bold;
+}
+
+
+/* 5.5 Article header
+---------------------*/
+
+.entry-title,
+.page-title {
+	font-size: 1.333em;
+	font-weight: bold;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	padding: 0 0 0 0;
+}
+
+.page-title,
+.page .entry-title {
+	margin-bottom: 1.143em;
+}
+
+.entry-meta p,
+.entry-meta ul {
+	font-size: 0.833em;
+	color: #888;
+	margin-bottom: 0.9em;
+}
+
+/* 5.6 Article content headings
+-------------------------------*/
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content dt {
+	font-weight: bold;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	line-height: 1.2em;
+	padding: 0.8em 0 0.4em 0;
+}
+
+.entry-content h1,
+.entry-content h2 {
+	font-size: 1.167em;
+}
+
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content dt {
+	font-size: 1em;	
+}
+
+
+/* 5.7 Article content elements
+-------------------------------*/
+
+/* We're going to restate p and list sizes beacause iOS Safari enlarges the .entry-content div's font-size.
+   As to why it decides to do this... */
+
+.entry-content {
+	font-size: 1em;
+}
+
+.entry-content p,
+.entry-content ul,
+.entry-content ol,
+.entry-content dd,
+.comment p,
+.comment ul,
+.comment ol,
+.comment dd {
+	font-size: 1em;
+	margin-bottom: 0.75em;
+}
+
+.entry-content li {
+	margin-left: 1.25em;
+}
+
+.entry-content cite {
+	color: #444;
+}
+
+.entry-content pre,
+.comment pre {
+	overflow: auto;
+	display: block;
+	/* May I rot in hell for this IE6 hack */
+	_width: 90%;
+	font-size: 1em;
+	padding: 1.5em;
+	color: #AF0000;
+}
+
+.entry-content a,
+.entry-summary a {
+	border-bottom: 1px dotted #888;
+}
+
+/* 5.8 Article content images
+-----------------------------*/
+
+/* We're adding some importants here to override any inline dimensions. */
+
+.wp-caption,
+.gallery-caption  {
+	display: block;
+	max-width: 100% !important;
+	padding: 1.438em 0;
+}
+
+.wp-caption img,
+.entry-content img,
+.entry-content video {
+	max-width: 100% !important;
+	height: auto !important;
+	border: 1px solid #EFEFEF;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+	padding: 1.4375em auto;
+}
+
+.alignleft {
+	float: left;
+	display: inline;
+	margin-right: 0.75em;
+	border: 1px solid #EFEFEF;
+}
+
+.alignright {
+	float: right;
+	display: inline;
+	margin-left: 0.75em;
+	border: 1px solid #EFEFEF;
+}
+
+p.wp-caption-text {
+	margin-bottom: 0;
+	font-size: 0.833em;
+}
+
+
+/* 5.9 Article content tables
+-----------------------------*/
+
+.entry-content table,
+.comment table {
+	width: 100%;
+	margin: 1.5em 0;
+	border-collapse: collapse;
+	border: 0.0625em solid #EFEFEF;
+}
+
+.entry-content tr,
+.comment tr {
+	font-size: 0.75em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+.entry-content td,
+.comment td {
+	padding: 0.25em 0;
+}
+
+.entry-content tbody tr:nth-child(even),
+.comment tbody tr:nth-child(even) {
+	background-color: #EFEFEF;
+}
+
+.entry-content th,
+.entry-content tbody td,
+.comment th,
+.comment tbody td {
+	text-align: left;
+	padding-left: 0.25em;
+	margin: 0;
+}
+
+.entry-content th,
+.comment th {
+	font-weight: normal;
+	font-size: 1.333em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	background-color: #444;
+	color: #FFF;
+}
+
+.entry-content table caption,
+.comment table caption {
+	font-size: 0.75em;
+	font-family: georgia, 'liberation serif', palatino, serif;
+	font-style: italic;
+	text-align: left;
+}
+
+.entry-content tfoot tr,
+.comment tfoot tr {
+	font-size: 0.75em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	color: #AAA;
+}
+
+
+/* 5.10 Article footer
+----------------------*/
+
+.entry-footer {
+	padding-top: 0.75em;
+	border-top: 1px dotted #CFCFCF;
+	margin-top: -1px;
+	clear: both;
+}
+
+.entry-taxonomy {
+	padding-bottom: 0.75em;
+}
+
+.entry-taxonomy p {
+	font-size: 0.833em;
+	margin-bottom: 0;
+}
+
+.entry-taxonomy a {
+	font-style: italic;
+}
+
+
+/* 5.11 Comments
+----------------*/
+
+#comments {
+	padding: 0.375em 0 1.5em 0;
+	border-top: 1px solid #AFAFAF;
+	margin-top: -1px;
+	clear: both;
+}	
+
+.comment-heading,
+#reply-title {
+	font-size: 1.167em;
+	padding: 0;
+	margin-bottom: 0.75em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	font-weight: bold;
+}
+
+.form-allowed-tags {
+	font-size: 0.833em;
+}
+
+.page-numbers {
+	font-size: 0.833em;
+	padding-left: 1em;
+}
+
+.current {
+	font-weight: bold;
+}
+
+.bypostauthor {
+	padding: auto;
+	background-color: #FFF;
+}
+
+.avatar {
+	float: left;
+	margin-right: 0.375em;
+	margin-bottom: 0.375em;
+}
+
+.says {
+	display: none;
+}
+
+.reply {
+	display: block;
+	font-size: 1em;
+	margin-bottom: 3em;
+}
+
+.vcard {
+	padding-top: 0.75em;
+}
+
+.fn {
+	font-style: normal;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	display: block;
+	float: left;
+}
+
+.comment-meta {
+	font-size: 0.833em;
+	margin-bottom: 0.375em;
+	clear: both;
+}
+
+.commentlist li {
+	list-style-type: none;
+}
+
+.pinglist li {
+	font-size: 0.75em;
+	color: #AAA;
+	list-style-type: none;
+}
+
+.children li {
+	padding-left: 1em;
+	margin-left: 1em;
+	border-left: 0.0625em dotted #CFCFCF;
+}
+
+#commentform label {
+	font-size: 0.833em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#author,
+#email,
+#url,
+#commentform textarea {
+	display: block;
+	border: 1px solid #CFCFCF;
+	font-family: georgia, 'liberation serif', palatino, serif;
+	max-width: 98%; /* Make sure width - border never exceeds container width */
+}
+	
+#author,
+#email,
+#url {
+	margin-bottom: 0.5em;
+	padding: 0.25em;
+	font-size: 1em;
+}
+
+#commentform textarea {
+	display: block;
+	font-family: consolas, 'andale mono', 'courier new', monospace;
+	font-size: 1em;
+	padding: 0.25em;
+	height: 12em;
+}
+
+#submit {
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	cursor: pointer;
+}
+
+.form-allowed-tags {
+	font-size: 0.833em;
+	line-height: 1.25em;
+}
+
+.subscribe-to-comments {
+	margin-bottom: 0;
+}
+
+.subscribe-to-comments #subscribe {
+	float: left;
+	margin-right: 2px;
+}
+
+.subscribe-to-comments label {
+	float: left;
+	margin-bottom: 0 !important;
+}
+
+
+/* 6. ASIDES
+------------*/
+
+#sidebar {
+	color: #888;
+	border-top: 1px solid #444;
+	padding-top: 0.375em;
+}
+
+#sidebar .sidebar {
+	font-size: 81.25%;
+}
+
+.sidebar p ,
+.sidebar ul{
+	margin-bottom: 1.5em;
+}
+
+.sidebar ul {
+	border-top: 1px dotted #AAA;
+	margin-top: -1px;
+}
+
+.sidebar ul li {
+	padding: 0.375em 0;
+	border-bottom: 1px dotted #AAA;
+	margin-left: 0;
+	list-style-type: none;
+}
+
+.sidebar ul li ul,
+ul.sub-menu {
+	margin-bottom: 0;
+}
+
+.sidebar ul li ul li,
+ul.sub-menu li {
+	padding-left: 1em;
+}
+
+.sidebar ul li ul li:last-child {
+	border-bottom: none;
+	margin-bottom: 1px;
+	padding-bottom: 0;
+}
+
+.sidebar img {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+.widgetContainer {
+	padding-bottom: 0.75em;
+	clear: both;
+}
+
+.widgetTitle {
+	font-size: 1.167em;
+	font-weight: normal;
+	padding: 0 0 0.375em 0;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+.sidebar #searchform {
+	padding-bottom: 1.385em;
+}
+
+
+/* 6.1 Specific widget styles
+-----------------------------*/
+
+#wp-calendar table {
+	width: 100%;
+	margin: 1.5em 0;
+	border-collapse: collapse;
+	border: 0.0625em solid #CCC;
+}
+
+#wp-calendar tr {
+	font-size: 0.75em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#wp-calendar tbody tr:nth-child(even) {
+	background-color: #DFDFDF;
+}
+
+#wp-calendar th,
+#wp-calendar tbody td {
+	text-align: left;
+	padding-left: 0.25em;
+	margin: 0;
+}
+
+#wp-calendar th {
+	font-weight: bold;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	background-color: #444;
+	color: #FFF;
+}
+
+#wp-calendar table caption {
+	font-size: 0.75em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	text-align: left;
+}
+
+#wp-calendar tfoot tr {
+	font-size: 0.75em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	color: #AAA;
+}
+
+.sidebar .screen-reader-text {
+	display: none;
+}
+
+.widget_recent_comments a {
+	font-style: normal;
+}
+
+.widget_recent_comments a.url {
+	font-style: italic;
+}
+
+.sidebar #searchform{
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#s {
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	width: 12em;
+	font-size: 1em;
+}
+
+#searchsubmit {
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+	cursor: pointer;
+	font-size: 1em;
+}
+
+.widget_tag_cloud div {
+	padding-bottom: 0.692em;
+}
+
+.tagcloud {
+	display: block;
+	margin-bottom: 0.692em;
+}
+
+.widget_tag_cloud a:link,
+.widget_tag_cloud a:visited {
+	float: left;
+	margin-right: 0.25em;
+	font-size: 1em !important;
+	background-color: #CFCFCF;
+	padding: 0.25em 0.375em;
+	margin-bottom: 0.375em;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.widget_tag_cloud a:hover,
+.widget_tag_cloud a:active {
+	float: left;
+	margin-right: 0.25em;
+	font-size: 1em !important;
+	padding: 0.25em 0.375em;
+	margin-bottom: 0.375em;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+.widget_tag_cloud a:last-child {
+	margin-bottom: 1.384em;
+}
+
+
+/* 7. FOOTER
+------------*/
+
+#site-footer {
+	clear: both;
+	padding: 3em 0.375em 0 0.375em;
+	font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+}
+
+#site-footer p {
+	line-height: 1.25em;
+}
+
+#site-footer small {
+	font-size: 0.833em;
+}
+
+
+} /* end main screen and projection query */
+
+
+
+/* 8. PRINT STYLES
+------------------*/
+
+@media print {
+
+	* {
+		background-color: #FFF;
+		color: #000;
+	}
+	
+	html {
+		font-size: 100%;
+		line-height: 1.25;
+		font-family: 'pt serif', georgia, serif;
+	}
+	
+	#site-nav,
+	#sidebar,
+	#site-footer,
+	.accessibility,
+	.pagination,
+	.entry-taxonomy,
+	#respond,
+	#comments {
+		display: none;
+	}
+	
+	a {
+		text-decoration: none;
+		border-bottom: none;
+	}
+	
+	#site-title {
+		font-size: 1em;
+		margin-bottom: 0;
+	}
+	
+	#tag {
+		font-size: 0.833em;
+		margin: 0 0 3em 0;
+	}
+	
+	h1 a,
+	h2 a {
+		border-bottom: none;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-before: auto;
+	}
+	
+	img {
+		page-break-inside: avoid;
+	}
+	
+	.wp-caption,
+	.entry-content img {
+		max-width: 100% !important;
+		height: auto !important;
+	}
+	
+	.wp-caption-text,
+	.entry-meta p {
+		font-size: 0.833em;
+		font-style: italic;
+	}
+	
+	.entry-summary {
+		font-weight: bold;
+	}
+	
+	blockquote {
+		font-size: 0.915em;
+	}
+
+} /* End @media print query */
+
+
+/* 9. WIDE SCREEN STYLES (using @MEDIA)
+---------------------------------------*/
+
+@media screen and (min-width: 600px) {
+
+	/*	
+		
+		We set this first query to make sure that 
+		our measure isn't *too* wide on some narrow
+		width devices.
+
+	*/
+	
+	#wrapper {
+		max-width: 522px;
+		margin-top: 1.5em;
+	}
+	
+	#site-header {
+		background-size: 100%;
+		height: 9em;
+		padding: 0 0.375em;
+		margin-bottom: 3em;
+	}
+	
+}
+
+@media screen and (min-width: 850px) {
+
+	#wrapper {
+		max-width: 51em;
+		_width: 51em;
+	}
+	
+	#content {
+		clear: both;
+		width: 33em;
+		padding: 0;
+		float: left;
+		margin-right: 3em;
+		display: inline;
+	}
+
+	#sidebar {
+		float: left;
+		width: 15em;
+		padding: 0;
+		background-color: transparent;
+		border-top: none;
+	}
+	
+	#site-header {
+		height: 9em;
+		padding: 0 0.375em;
+	}
+	
+	#site-title {
+		padding-top: 1.5em;
+	}
+	
+	.hentry {
+		padding-bottom: 3em;
+	}
+	
+	.entry-title,
+	.page-title {
+		font-size: 1.75em;
+		font-weight: bold;
+		font-family: 'droid sans', arial, helvetica, 'lucida grande', 'lucida sans unicode', verdana, sans-serif;
+		padding: 0 0 0 0;
+		margin-bottom: 0.429em;
+		line-height: 1.2em;
+	}
+	
+	.entry-content h1,
+	.entry-content h2,
+	.entry-content h3,
+	.entry-content h4,
+	.entry-content h5,
+	.entry-content h6,
+	.entry-content dt {
+		font-weight: bold;
+	}
+	
+	.single .entry-summary p {
+		margin-bottom: 1.5em;
+		padding-bottom: 1.5em;
+		border-bottom: 1px dotted #CFCFCF;
+		margin-top: -1px;
+	}
+	
+	.single .entry-content {
+		padding-bottom: 1.5em;
+	}
+	
+	blockquote {
+		padding: 3em 1.5em;
+		margin: 0;
+		color: #888;
+		font-size: 15px;
+	}
+	
+	.single .entry-content .wide,
+	.single .entry-content .wide img {
+		max-width: 50.25em !important;
+		height: auto !important;
+	}
+	
+	.single .pagination {
+		padding-bottom: 1.5em;
+	}
+	
+	.comment-heading,
+	#reply-title {
+		font-weight: bold;
+	}
+	
+	#author,
+	#email,
+	#url,
+	#commentform textarea {
+		width: 32.375em;
+		max-width: 32.375em;
+	}
+	
+	#author,
+	#email,
+	#url {
+		width: 14.375em;
+		max-width: 14.375em;
+	}
+	
+} /* End @media width query */

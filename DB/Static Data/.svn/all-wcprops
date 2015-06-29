@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/LocalJoe/!svn/ver/957/trunk/DB/Static%20Data
+END
+import-data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/934/trunk/DB/Static%20Data/import-data.sql
+END
+image_type.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/LocalJoe/!svn/ver/136/trunk/DB/Static%20Data/image_type.sql
+END
+parent_category.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/18/trunk/DB/Static%20Data/parent_category.sql
+END
+posting_status.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/LocalJoe/!svn/ver/136/trunk/DB/Static%20Data/posting_status.sql
+END
+format.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/84/trunk/DB/Static%20Data/format.sql
+END
+parent_category_attribute.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/LocalJoe/!svn/ver/520/trunk/DB/Static%20Data/parent_category_attribute.sql
+END
+updateStaticValues.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/957/trunk/DB/Static%20Data/updateStaticValues.sql
+END
+category_attribute_valid_value.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/LocalJoe/!svn/ver/235/trunk/DB/Static%20Data/category_attribute_valid_value.sql
+END
+category.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LocalJoe/!svn/ver/520/trunk/DB/Static%20Data/category.sql
+END
+action.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/LocalJoe/!svn/ver/827/trunk/DB/Static%20Data/action.sql
+END
+authentication_method.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/LocalJoe/!svn/ver/135/trunk/DB/Static%20Data/authentication_method.sql
+END
+category_attribute.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/LocalJoe/!svn/ver/139/trunk/DB/Static%20Data/category_attribute.sql
+END
+cities.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/LocalJoe/!svn/ver/21/trunk/DB/Static%20Data/cities.sql
+END

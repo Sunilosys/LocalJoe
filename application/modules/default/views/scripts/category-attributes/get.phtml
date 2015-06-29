@@ -1,0 +1,127 @@
+  
+<?php
+$categoryAttrAllIds = "";
+$categoryAttrIdsOnly = "";
+foreach ($this->categoryAtrributesInfo as $key => $value) { $categoryAttrIdsOnly = $categoryAttrIdsOnly . ',' . $value['category_attribute_id'];
+    ?>
+    <?php if (strtolower($value['display_format']) == 'text') {
+        $categoryAttrAllIds = $categoryAttrAllIds . 'category' . $value['category_attribute_id'] . $value['display_sequence'] . ','; ?>
+        <div class="line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']); ?>:</label><input title='<?php echo $value['help_text'] ?>' class='alphanumeric <?php if ($value['is_required']) echo "required"; ?>' id='<?php echo 'category' . $value['category_attribute_id'] . $value['display_sequence'] ?>' name='<?php echo 'category' . $value['category_attribute_id'] . $value['display_sequence'] ?>' type='text'/>
+        </div>
+        <?php } else if (strtolower($value['display_format']) == 'radiobutton') { ?>
+        <div class="line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']); ?>:</label><?php
+            $valueArray = explode("~$~", $value['value']);
+            for ($i = 0; $i < sizeof($valueArray); ++$i) {
+                if (($i + 1) == sizeof($valueArray))
+                    $categoryAttrAllIds = $categoryAttrAllIds . 'category' . $value['category_attribute_id'] . $i . $value['display_sequence'] . ',';
+                else
+                    $categoryAttrAllIds = $categoryAttrAllIds . 'category' . $value['category_attribute_id'] . $i . $value['display_sequence'] . '|';            
+                if ($i==0){
+                    echo '<input id="category' . $value["category_attribute_id"] . $i . $value["display_sequence"].'" name="'.$this->translate->_($value["name"]).'"  value="'.$valueArray[$i].'" type="checkbox">';
+                    $checked = $valueArray[$i];
+                }else{
+                    echo '<input id="category' . $value["category_attribute_id"] . $i . $value["display_sequence"].'" name="'.$this->translate->_($value["name"]).'" value="'.$valueArray[$i].'" type="hidden">';
+                     $unchecked = $valueArray[$i]; ?>
+                    <script>
+                        $('#<?php echo 'category' . $value['category_attribute_id'] . '0' . $value['display_sequence'] ?>').iphoneStyle({
+                          checkedLabel: '<?php echo $checked;?>',
+                          uncheckedLabel: '<?php echo $unchecked;?>',
+                          resizeHandle:false
+                        });
+                    </script>
+                <?php }?>
+        <?php } ?>
+        </div>
+        <?php } else if (strtolower($value['display_format']) == 'checkbox') { ?>
+        <div class="line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']); ?>:</label>
+            <span class='checkboxes'> 
+            <?php
+            $valueArray = explode("~$~", $value['value']);
+            for ($i = 0; $i < sizeof($valueArray); ++$i) {
+                if (($i + 1) == sizeof($valueArray))
+                    $categoryAttrAllIds = $categoryAttrAllIds . 'category' . $value['category_attribute_id'] . $i . $value['display_sequence'] . ',';
+                else
+                    $categoryAttrAllIds = $categoryAttrAllIds . 'category' . $value['category_attribute_id'] . $i . $value['display_sequence'] . '|';
+                ?><input type="checkbox"/><a class="check unselected" name='<?php echo $this->translate->_($value['name']); ?>' id='<?php echo 'category' . $value['category_attribute_id'] . $i . $value['display_sequence'] ?>'><?php echo $valueArray[$i] ?></a>
+        <?php } ?>
+              </span>
+        </div>
+    <?php } else if (strtolower($value['display_format']) == 'integer') {
+        $categoryAttrAllIds = $categoryAttrAllIds . 'category' . $value['category_attribute_id'] . $value['display_sequence'] . ','; ?>
+        <div class="line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']); ?>:</label><?php if ($value['is_currency'] == 1) { ?><span><?php echo $this->currencySymbol . ' ';?></span><?php } ?><input title='<?php echo $value['help_text'] ?>' id='<?php echo 'category' . $value['category_attribute_id'] . $value['display_sequence'] ?>' class='numeric <?php if ($value['is_required']) echo "required"; ?>'  style="width:75px" name='<?php echo 'category' . $value['category_attribute_id'] . $value['display_sequence'] ?>' type='text'/>
+        </div>
+        <?php } else if (strtolower($value['display_format']) == 'integer+dimension') {
+            $categoryAttrAllIds = $categoryAttrAllIds . 'category_value' . $value['category_attribute_id'] . $value['display_sequence'] . '|';
+            $categoryAttrAllIds = $categoryAttrAllIds . 'category_dim_dd' . $value['category_attribute_id'] . $value['display_sequence'] . ',';
+               ?>
+        <div class="line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']);?>:</label><?php if ($value['is_currency'] == 1) { ?><span><?php echo $this->currencySymbol . ' ';?></span><?php } ?><input title='<?php echo $value['help_text'] ?>' class='numeric <?php if ($value['is_required']) echo "required"; ?>' style="width:75px" id='<?php echo 'category_value' . $value['category_attribute_id'] . $value['display_sequence'] ?>' name='<?php echo 'category_value' . $value['category_attribute_id'] . $value['display_sequence'] ?>' type='text'/>  <select class="dropdown_without_autocomplete" name='<?php echo $this->translate->_($value['name']); ?>' id='<?php echo 'category_dim_dd' . $value['category_attribute_id'] . $value['display_sequence'] ?>'>
+            <?php
+            $valueArray = explode("~$~", $value['value']);
+            for ($i = 0; $i < sizeof($valueArray); ++$i) { ?>        
+               
+             <option value='<?php echo $valueArray[$i] ?>'><?php echo $valueArray[$i] ?></option>
+        <?php } ?>
+            </select>
+        </div>
+ <?php } else if (strtolower($value['display_format']) == 'numeric+dimension') {
+            $categoryAttrAllIds = $categoryAttrAllIds . 'category_value' . $value['category_attribute_id'] . $value['display_sequence'] . '|';
+            $categoryAttrAllIds = $categoryAttrAllIds . 'category_dim_dd' . $value['category_attribute_id'] . $value['display_sequence'] . ',';
+               ?>
+        <div class="line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']);?>:</label><?php if ($value['is_currency'] == 1) { ?><span><?php echo $this->currencySymbol . ' ';?></span><?php } ?><input title='<?php echo $value['help_text'] ?>' class='numeric <?php if ($value['is_required']) echo "required"; ?>' style="width:75px" id='<?php echo 'category_value' . $value['category_attribute_id'] . $value['display_sequence'] ?>' name='<?php echo 'category_value' . $value['category_attribute_id'] . $value['display_sequence'] ?>' type='text'/>  <select class="dropdown_without_autocomplete" name='<?php echo $this->translate->_($value['name']); ?>' id='<?php echo 'category_dim_dd' . $value['category_attribute_id'] . $value['display_sequence'] ?>'>
+            <?php
+            $valueArray = explode("~$~", $value['value']);
+            for ($i = 0; $i < sizeof($valueArray); ++$i) { ?>        
+               
+             <option value='<?php echo $valueArray[$i] ?>'><?php echo $valueArray[$i] ?></option>
+        <?php } ?>
+            </select>
+        </div>
+    <?php } else if (strtolower($value['display_format']) == 'numeric') {
+        $categoryAttrAllIds = $categoryAttrAllIds . 'category' . $value['category_attribute_id'] . $value['display_sequence'] . ','; ?>
+        <div class="line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']);?>:</label><?php if ($value['is_currency'] == 1) { ?><span><?php echo $this->currencySymbol . ' ';?></span><?php } ?><input title='<?php echo $value['help_text'] ?>' class='numeric <?php if ($value['is_required']) echo "required"; ?>' style="width:75px" id='<?php echo 'category' . $value['category_attribute_id'] . $value['display_sequence'] ?>' name='<?php echo $this->translate->_($value['name']); ?>' type='text'/></div>
+ 
+ <?php } else if (strtolower($value['display_format']) == 'date') {
+        $categoryAttrAllIds = $categoryAttrAllIds . 'category_date' . $value['category_attribute_id'] . $value['display_sequence'] . ','; ?>
+        <div class="dateContainer line" ><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']);?>:</label><input title='<?php echo $value['help_text'] ?>' class='<?php if ($value['is_required']) echo "required"; ?> dpDate' style="width:100px" id='<?php echo 'category_date' . $value['category_attribute_id'] . $value['display_sequence'] ?>' name='<?php echo $this->translate->_($value['name']); ?>'  type='text'/></div>
+
+
+    <?php } else if (strtolower($value['display_format']) == 'textarea') {
+        $categoryAttrAllIds = $categoryAttrAllIds . 'category' . $value['category_attribute_id'] . $value['display_sequence'] . ','; ?>
+        <div class="line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']); ?>:</label><textarea class='<?php if ($value['is_required']) echo "required"; ?>' id='<?php echo 'category' . $value['category_attribute_id'] . $value['display_sequence'] ?>' name='<?php echo $this->translate->_($value['name']); ?>'/>
+        </div>
+    <?php
+    } else if (strtolower($value['display_format']) == 'dropdown') {
+        $categoryAttrAllIds = $categoryAttrAllIds . 'category_dd' . $value['category_attribute_id'] . $value['display_sequence'] . ',';
+        ?>
+        <div class="ddContainer line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']); ?>:</label><select  class='<?php if ($value['is_required']) {echo "required";} else echo "dropdown_without_autocomplete";  ?>'  style='width:auto;' id='<?php echo 'category_dd' . $value['category_attribute_id'] . $value['display_sequence'] ?>' name='<?php echo 'category_dd' . $value['category_attribute_id'] . $value['display_sequence'] ?>'>
+                <option value=''>Select</option>
+                <?php
+                $valueArray = explode("~$~", $value['value']);
+                for ($i = 0; $i < sizeof($valueArray); ++$i) {
+                    ?>    
+                    <option value='<?php echo $valueArray[$i] ?>'><?php echo $valueArray[$i] ?></option>
+        <?php } ?>
+            </select>
+        </div>
+            <?php } else if (strtolower($value['display_format']) == 'dropdown+autocomplete') {
+                $categoryAttrAllIds = $categoryAttrAllIds . 'category_ddwa' . $value['category_attribute_id'] . $value['display_sequence'] . ','; ?>
+        <div style="text-align:left"  class="ddwaContainer line"><label name='<?php echo $value['category_attribute_id'] ?>' class="attribute-label"><?php echo $this->translate->_($value['name']); ?>:</label><select id='<?php echo 'category_ddwa' . $value['category_attribute_id'] . $value['display_sequence'] ?>' class='<?php if ($value['is_required']) echo "required"; else echo "dropdown_with_autocomplete";?>'  style='width:auto;' name='<?php echo 'category_ddwa' . $value['category_attribute_id'] . $value['display_sequence'] ?>'>
+                <option value=''>Select</option>
+                <?php
+                $valueArray = explode('~$~', $value['value']);
+                for ($i = 0; $i < sizeof($valueArray); ++$i) {
+                    ?>    
+                    <option value='<?php echo $valueArray[$i] ?>'><?php echo $valueArray[$i] ?></option>
+        <?php } ?>
+            </select>
+        </div>
+    <?php } ?>
+   <?php } ?>
+ <input type="hidden" value='<?php echo trim($categoryAttrIdsOnly,",") ?>' id='categoryAttrIdsOnly' name='categoryAttrIdsOnly' />
+ <input type="hidden" value='<?php echo $categoryAttrAllIds ?>' id='categoryAttrAllIds' name='categoryAttrAllIds' />
+ <input type="hidden" value='<?php echo $this->category_id ?>' id='selected_category_id' name='selected_category_id' />
+ <input type="hidden" value='<?php echo $this->emphasizedCategoryIds ?>' id='emphasized_category_ids' name='emphasized_category_ids' />
+ <input type="hidden" value=''  id='posting_attributes_hidden' name='posting_attributes_hidden' />
+ 
+
+

@@ -1,0 +1,39 @@
+[development]
+db.adapter = PDO_MYSQL
+db.params.host = localhost
+db.params.username = localjoe
+db.params.password = localjoe
+db.params.dbname = localjoedb
+
+[production]
+db.adapter = PDO_MYSQL
+db.params.host = localhost
+db.params.username = localjoe
+db.params.password = localjoe
+db.params.dbname = localjoedb
+
+[posting]
+expireafter = +7 days
+
+[email]
+format = html
+fromEmail = ssalunkhe@ebusinessdesign.com
+fromName = Local Joe Support Team
+smtpServer = email-smtp.us-east-1.amazonaws.com
+smtpUser = AKIAIHPVN4FXSQUX3VJA
+smtpPwd = Ai478D4xTcO3AXZN9Uloqo/6AdJF86xIEw8jOxWZIv5C
+subject =Welcome to Local Joe. Please activate your account
+website =localjoe
+activationUrl = http://localhost:8080/user/pass
+
+[imageupload]
+store = localhost
+image_store_path = /var/www/html/localjoe/public
+image_store_url = http://sg.localjoe.com
+image_upload_dir = uploads
+original_image_dir = original
+thumbnails_image_dir = thumbnails
+
+[sso]
+sso_url = http://localjoe.com
+

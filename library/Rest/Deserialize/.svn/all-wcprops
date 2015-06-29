@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Deserialize
+END
+Json.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Deserialize/Json.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Deserialize/Interface.php
+END
+Xml.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Deserialize/Xml.php
+END
+Form.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/LocalJoe/!svn/ver/409/trunk/library/Rest/Deserialize/Form.php
+END

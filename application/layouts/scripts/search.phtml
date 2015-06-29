@@ -1,0 +1,56 @@
+<div class='searchwrap'>
+   
+    <form id='searchform' class='col7 col'> 
+        <div id='autocomplete'></div>
+        <div class='searchbox col6 col'><input id='search' type='text'/>
+
+            <div class='categories'>
+                <div class='select'>
+                    <a id='select-category' class="select-category">All Categories</a>
+                    <input type="hidden" id="selected_category_hidden" value="allcategories"/>
+                    <div id='category-finder-search-home' class='finder'><div><div class='categories-list'>
+                                <ul>
+                                         <li><b><a style="padding-left:10px" id="allcategories" name="allcategories">All Categories</a></b></li>
+                                </ul>
+                                <div class='column'><ul>
+                                         
+                                         
+                                <?php
+                                //$numPerCol = ceil((count($this->parentCategoryInfo) + count($this->categoryInfo)) / 6);
+                                $i = 0;
+                                foreach ($this->parentCategoryInfo as $key => $val) {
+                                    if ($i != 0)
+                                     echo "</ul></div><div class='column'><ul>";   
+                                    ?>
+
+                                        <li><img class="category-icon" src="/images/category/<?php echo strtolower($val->getParentCategoryName()) ?>-icon.png"></img><h3><b><a  id='parentcategory_<?php echo $val->getParent_category_id() ?>' name='parentcategory_<?php echo $val->getParent_category_id() ?>'><?php echo $val->getParentCategoryName() ?></a></b></h3></li>
+                                    <?php
+                                    $i++;
+                                    //if ($i > $numPerCol) {
+                                     //   echo "</ul></div><div class='column'><ul>";
+                                     //   $i = 0;
+                                   // }
+                                    foreach ($this->categoryInfo as $key2 => $val2) {
+                                        ?>
+                                        <?php if ($val->getParent_category_id() == $val2->getParent_category_id()) { ?>
+                                            <li><h4><a id='category_<?php echo $val->getParent_category_id() . '_' ?><?php echo $val2->getCategory_id() ?>' name='category_<?php echo $val2->getCategory_id() ?>'><?php echo $this->translate->_($val2->getCategoryName()) ?></a></h4></li>
+                                            <?php 
+                                           // $i++;
+                                           // if ($i > $numPerCol) {
+                                            //    echo "</ul></div><div class='column'><ul>";
+                                             //   $i = 0;
+                                            //}
+                                        }
+                                        ?>
+                                    <?php } ?>                   
+                                <?php } ?>
+                            </ul></div>  
+                                
+                            </div><!--categories-list-->
+                        </div></div>
+                </div>
+            </div>
+        </div>
+        <a href='#page=search&ref=sr_nofs' id="search_across_category" name="search_across_category" class='button large col1 col'>&nbsp;</a>
+    </form> 
+</div><!--.searchwrap-->
